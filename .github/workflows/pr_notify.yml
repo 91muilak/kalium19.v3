@@ -21,4 +21,4 @@ jobs:
             📥 **Новый Pull Request!**
             👨‍💻 [${{ github.actor }}](https://github.com/${{ github.actor }}) / telegram: @${{ github.actor }}
             🗂 [${{ github.repository }}](https://github.com/${{ github.repository }}/pulls)
-            🤖 ${{github.workflow}}
+            🤖 ${{ github.workflow }}
