@@ -5,9 +5,10 @@
 
 	"files.exclude": {
 		"dist/"          : false,
-		".github/"       : false,
+		// ".github/"       : true,
+		// ".vscode/"       : true,
 		"node_modules"   : true,
-		".editorconfig"  : false,
+		".editorconfig"  : true,
 		"package-lock.*" : true,
 		".gitignore"     : true,
 		"LICENSE"        : true
@@ -55,6 +56,11 @@
 			"backgroundColor": "transparent",
 			"bold"           : false,
 			"italic"         : false
+		},
+		{
+			"tag"            : "/",
+			"color"          : "#c1c1c1",
+			"italic"         : true
 		}
 	],
 
