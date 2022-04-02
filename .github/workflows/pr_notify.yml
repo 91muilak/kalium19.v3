@@ -1,0 +1,24 @@
+name: pr_notify
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  sendMessage:
+    name: Отправка сбщ. о PR в чат Telegram
+    runs-on: ubuntu-latest
+    steps:
+      - name: Отправка сбщ.
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TG_GROUP }}
+          token: ${{ secrets.TG_BOT_TOKEN }}
+          format: markdown
+          photo: /.github/logo.png
+          message: |
+            📥 **Новый Pull Request!**
+            👨‍💻 [${{ github.actor }}](https://github.com/${{ github.actor }}) / telegram: @${{ github.actor }}
+            🗂 [${{ github.repository }}](https://github.com/${{ github.repository }}/pulls)
+            🤖 ${{github.workflow}}
