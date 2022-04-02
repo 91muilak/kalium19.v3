@@ -1,0 +1,16 @@
+{
+
+	"File Header [SASS]": {
+		"scope": "scss,sass",
+		"prefix": "file-header",
+		"body": [
+			"/// @license  MIT License",
+			"/// @created  $CURRENT_YEAR/$CURRENT_MONTH/$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND",
+			"/// @author   ${1:Haba Kudzaev (rx1310)} <${2:rx1310@inbox.ru}>",
+			"/// @link     https://github.com/${3:rx1310}",
+			"",
+			""
+		]
+	}
+
+}
