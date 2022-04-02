@@ -1,4 +1,4 @@
-name: pr_notify
+name: Уведомление о PR в Telegram
 
 on:
   pull_request:
