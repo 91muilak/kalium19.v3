@@ -1,43 +1,43 @@
 {
-  "name": "kalium19",
-  "version": "22.2.0",
-  "description": "📦 Набор утилит, миксинов, расширений на языке препроцессора @sass для помощи в ускорении, упрощении и улучщения процесса написания CSS-стилей.",
-  "main": "index.sass",
-  "scripts": {
-    "test": "sass --version"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/91muilak/kalium19.git"
-  },
-  "funding": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/rx1310"
-  },
-  "keywords": [
-    "91muilak",
-    "kalium19",
-    "k19",
-    "sass",
-    "scss",
-    "sass-mixins",
-    "rx1310"
-  ],
-  "author": {
-    "name": "rx1310",
-    "email": "rx1310@inbox.ru",
-    "url": "https://rx1310.github.io"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/91muilak/kalium19/issues"
-  },
-  "homepage": "https://github.com/91muilak/kalium19#readme",
-  "devDependencies": {
-    "sass": "^1.49.11"
-  },
-  "dependencies": {
-    "eclint": "^2.8.1",
-    "npm-run-all": "^4.1.5"
-  }
+	"name": "kalium19",
+	"version": "22.2.0",
+	"description": "📦 Набор утилит, миксинов, расширений на языке препроцессора @sass для помощи в ускорении, упрощении и улучщения процесса написания CSS-стилей.",
+	"main": "index.sass",
+	"scripts": {
+		"test": "sass --version"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/91muilak/kalium19.git"
+	},
+	"funding": {
+		"type": "opencollective",
+		"url": "https://opencollective.com/rx1310"
+	},
+	"keywords": [
+		"91muilak",
+		"kalium19",
+		"k19",
+		"sass",
+		"scss",
+		"sass-mixins",
+		"rx1310"
+	],
+	"author": {
+		"name": "rx1310",
+		"email": "rx1310@inbox.ru",
+		"url": "https://rx1310.github.io"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/91muilak/kalium19/issues"
+	},
+	"homepage": "https://github.com/91muilak/kalium19#readme",
+	"devDependencies": {
+		"sass": "^1.49.11"
+	},
+	"dependencies": {
+		"eclint": "^2.8.1",
+		"npm-run-all": "^4.1.5"
+	}
 }
