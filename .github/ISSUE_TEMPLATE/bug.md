@@ -18,7 +18,7 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas dolor totam o
 Sass is watching for changes. Press Ctrl-C to stop.
 
 Warning: Kalium19 first compile test!
-    index.scss 1:1  root stylesheet
+		index.scss 1:1  root stylesheet
 
 Compiled index.scss to index.css.
 </code></pre></details>
