@@ -56,11 +56,6 @@
 			"backgroundColor": "transparent",
 			"bold"           : false,
 			"italic"         : false
-		},
-		{
-			"tag"            : "/",
-			"color"          : "#c1c1c1",
-			"italic"         : true
 		}
 	],
 

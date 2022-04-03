@@ -1,16 +1,16 @@
-/// @license  MIT License
-/// @created  2022/04/03 14:11:00
-/// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
-/// @link     https://github.com/rx1310
+// @license  MIT License
+// @created  2022/04/03 14:11:00
+// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+// @link     https://github.com/rx1310
 
 // * Импорты
 @use 'legacy' as *;
 
 // * Сам миксин
-// @param $prop     CSS-свойство
-// @param $val      значение CSS-свойства
-// @param $prefixes список префиксов (без запятых)
-// @param $defDec   boolean-переменная, которая позволяет убрать свойство без префикса
+/// @param $prop     CSS-свойство
+/// @param $val      значение CSS-свойства
+/// @param $prefixes список префиксов (без запятых)
+/// @param $defDec   boolean-переменная, которая позволяет убрать свойство без префикса
 @mixin prefixer($prop, $val, $prefixes: (), $defDec: true) {
 
 	// ? Если параметром $prefixes указано значение
