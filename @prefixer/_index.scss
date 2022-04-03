@@ -13,10 +13,10 @@
 /// @param $defDec   boolean-переменная, которая позволяет убрать свойство без префикса
 @mixin prefixer($prop, $val, $prefixes: (), $defDec: true) {
 
-	// ? Если параметром $prefixes указано значение
-	// ? "all", то будет применён миксин prefixer-legacy.
 	@if $prefixes == all {
 
+		// ? Если параметром $prefixes указано значение
+		// ? "all", то будет применён миксин prefixer-legacy.
 		@include prefixer-legacy(
 			$prop,
 			$val
@@ -36,6 +36,45 @@
 		@if $defDec == true {
 			/* non prefixed "#{$prop}" */
 			#{$prop}: $val;
+		}
+
+	}
+
+}
+
+// * Расширенная версия Prefixer
+/// @param $decs     список CSS-свойств
+/// @param $prefixes список префиксов (без запятых)
+/// @param $defDec   boolean-переменная, которая позволяет убрать свойство без префикса
+@mixin prefixer-pack($decs, $prefixes: (), $defDec: true) {
+
+	@each $prop, $val in $decs {
+
+		@if $prefixes == all {
+
+			// ? Если параметром $prefixes указано значение
+			// ? "all", то будет применён миксин prefixer-legacy.
+			@include prefixer-legacy(
+				$prop,
+				$val
+			);
+
+		} @else {
+
+			// ? Проходим по списку $prefixes и добавляем
+			// ? префиксы по очереди.
+			@each $prefix in $prefixes {
+				/* #{$prop} for "#{$prefix}" */
+				#{'-' + $prefix + '-' + $prop}: $val;
+			}
+
+			// ? Если передать параметру $defDec значение true,
+			// ? то будет добавлена строка без префикса.
+			@if $defDec == true {
+				/* non prefixed "#{$prop}" */
+				#{$prop}: $val;
+			}
+
 		}
 
 	}
