@@ -23,10 +23,10 @@ $border-radius: null !default;
 }
 
 // * Расширенная версия миксина
-/// @paradm $radius-tl значение для свойства border-radius TopLeft
-/// @paradm $radius-tr значение для свойства border-radius TopRight
-/// @paradm $radius-br значение для свойства border-radius BottomRight
-/// @paradm $radius-bl значение для свойства border-radius BottomLeft
+/// @param $radius-tl значение для свойства border-radius TopLeft
+/// @param $radius-tr значение для свойства border-radius TopRight
+/// @param $radius-br значение для свойства border-radius BottomRight
+/// @param $radius-bl значение для свойства border-radius BottomLeft
 @mixin border-radius($radius-tl: 0, $radius-tr: 0, $radius-br, $radius-bl) {
 
 	/*
