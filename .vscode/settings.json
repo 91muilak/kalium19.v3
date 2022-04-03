@@ -4,9 +4,9 @@
 	"npm-scripts.showStartNotification": false,
 
 	"files.exclude": {
-		// ".github/"      : true,
+		".github/"      : true,
 		// ".vscode/"      : true,
-		// ".editorconfig" : true,
+		".editorconfig" : true,
 		".gitignore"    : true,
 		"dist/"         : false,
 		"LICENSE"       : true,

@@ -1,0 +1,26 @@
+/// @license  MIT License
+/// @created  2022/04/03 14:23:52
+/// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+/// @link     https://github.com/rx1310
+
+// * Переменные
+$prefixes-legacy: (
+	webkit,
+	khtml,
+	moz,
+	ms,
+	o
+) !default;
+
+// * Сам миксин
+// @param $prop CSS-свойство
+// @param $val  значение CSS-свойства
+@mixin prefixer-legacy($prop, $val) {
+
+	// ? Проходим по списку $prefixes и добавляем
+	// ? префиксы по очереди.
+	@each $prefix in $prefixes-legacy {
+		-#{$prefix}-#{$prop}: #{$val};
+	}
+	
+}
