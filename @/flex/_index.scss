@@ -7,19 +7,6 @@
 @use '../prefixer' as *;
 @use 'sass:map';
 
-// * Передача модулей
-@forward 'align-content';
-@forward 'align-items';
-@forward 'align-self';
-@forward 'basis';
-@forward 'direction';
-@forward 'flow';
-@forward 'grow';
-@forward 'justify-content';
-@forward 'order';
-@forward 'shrink';
-@forward 'wrap';
-
 // * Миксин Flexbox
 /// @param $type тип контейнера
 @mixin flexbox($type: null) {

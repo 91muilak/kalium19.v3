@@ -10,9 +10,21 @@
 @forward '@/box-shadow';
 @forward '@/box-sizing';
 @forward '@/clearfix';
-@forward '@/flex';
 @forward '@/hide-text';
 @forward '@/important';
+
+@forward '@/flex';
+@forward '@/flex/align-content';
+@forward '@/flex/align-items';
+@forward '@/flex/align-self';
+@forward '@/flex/basis';
+@forward '@/flex/direction';
+@forward '@/flex/flow';
+@forward '@/flex/grow';
+@forward '@/flex/justify-content';
+@forward '@/flex/order';
+@forward '@/flex/shrink';
+@forward '@/flex/wrap';
 
 @forward '@/colors/amber';
 @forward '@/colors/blue-grey';
