@@ -1,0 +1,28 @@
+// @license  MIT License
+// @created  2022/04/07 05:04:39
+// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+// @link     https://github.com/rx1310
+
+// * Модули
+@use '../prefixer' as *;
+
+// * Миксин
+/// @param $int значение свойства flex-glow
+@mixin flex-grow($int: 1) {
+
+	@include prefixer(
+		box-flex,
+		$int,
+		webkit moz,
+		false
+	);
+
+	@include prefixer(
+		flex-grow,
+		$int,
+		webkit
+	);
+
+	-ms-flex: $int;
+
+}
