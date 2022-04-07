@@ -1,0 +1,24 @@
+// @license  MIT License
+// @created  2022/04/07 05:11:04
+// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+// @link     https://github.com/rx1310
+
+// * Модули
+@use '../prefixer' as *;
+
+// * Миксин
+/// @param $vals значение свойства flex-wrap
+@mixin flex-wrap($val: nowrap) {
+
+  /* No Webkit/FF Box fallback. */
+  -webkit-flex-wrap: $val;
+
+  @if $val == nowrap {
+    -ms-flex-wrap: none;
+  } @else {
+    -ms-flex-wrap: $val;
+  }
+
+  flex-wrap: $val;
+
+}

@@ -14,6 +14,10 @@
 @forward 'direction';
 @forward 'flow';
 @forward 'grow';
+@forward 'justify-content';
+@forward 'order';
+@forward 'shrink';
+@forward 'wrap';
 
 // * Миксин Flexbox
 /// @param $type тип контейнера
