@@ -9,5 +9,5 @@
 /// @param {Number} $percentage - percentage of `$color` in returned color
 /// @return {Color}
 @function color-shade($color, $percentage) {
-  @return mix(black, $color, $percentage);
+	@return mix(black, $color, $percentage);
 }

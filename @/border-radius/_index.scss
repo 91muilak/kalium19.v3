@@ -30,10 +30,10 @@ $border-radius: null !default;
 @mixin border-radius($radius-tl: 0, $radius-tr: 0, $radius-br, $radius-bl) {
 
 	/*
-	  Top Left:     #{$radius-tl}
-	  Top Right:    #{$radius-tr}
-	  Bottom Right: #{$radius-br}
-	  Bottom Left:  #{$radius-bl}
+		Top Left:     #{$radius-tl}
+		Top Right:    #{$radius-tr}
+		Bottom Right: #{$radius-br}
+		Bottom Left:  #{$radius-bl}
 	 */
 
 	// ? Генерация свойств для WebKit

@@ -10,15 +10,15 @@
 /// @param $vals значение свойства flex-wrap
 @mixin flex-wrap($val: nowrap) {
 
-  /* No Webkit/FF Box fallback. */
-  -webkit-flex-wrap: $val;
+	/* No Webkit/FF Box fallback. */
+	-webkit-flex-wrap: $val;
 
-  @if $val == nowrap {
-    -ms-flex-wrap: none;
-  } @else {
-    -ms-flex-wrap: $val;
-  }
+	@if $val == nowrap {
+		-ms-flex-wrap: none;
+	} @else {
+		-ms-flex-wrap: $val;
+	}
 
-  flex-wrap: $val;
+	flex-wrap: $val;
 
 }

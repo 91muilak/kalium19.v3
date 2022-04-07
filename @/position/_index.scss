@@ -10,11 +10,11 @@
 /// @param {Length} $bottom [null] - Bottom offset
 /// @param {Length} $left [null] - Left offset
 @mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
-  position: $position;
-  top: $top;
-  right: $right;
-  bottom: $bottom;
-  left: $left;
+	position: $position;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
 }
 
 // * Shorthand mixin for absolute positioning
@@ -22,7 +22,7 @@
 /// @param {Arglist} $args - Offsets
 /// @require {mixin} position
 @mixin absolute($args...) {
-  @include position(absolute, $args...);
+	@include position(absolute, $args...);
 }
 
 // * Shorthand mixin for relative positioning
@@ -30,7 +30,7 @@
 /// @param {Arglist} $args - Offsets
 /// @require {mixin} position
 @mixin relative($args...) {
-  @include position(relative, $args...);
+	@include position(relative, $args...);
 }
 
 // * Shorthand mixin for fixed positioning
@@ -38,5 +38,5 @@
 /// @param {Arglist} $args - Offsets
 /// @require {mixin} position
 @mixin fixed($args...) {
-  @include position(fixed, $args...);
+	@include position(fixed, $args...);
 }

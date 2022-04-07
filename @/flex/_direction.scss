@@ -10,7 +10,7 @@
 /// @param $direction значение свойства box-direction
 @mixin flex-direction($direction: row) {
 
-  @if $direction == row-reverse {
+	@if $direction == row-reverse {
 
 		@include prefixer-pack(
 			(
@@ -21,7 +21,7 @@
 			false
 		);
 
-  } @else if $direction == column {
+	} @else if $direction == column {
 
 		@include prefixer-pack(
 			(
@@ -32,7 +32,7 @@
 			false
 		);
 
-  } @else if $direction == column-reverse {
+	} @else if $direction == column-reverse {
 
 		@include prefixer-pack(
 			(
@@ -43,7 +43,7 @@
 			false
 		);
 
-  } @else {
+	} @else {
 
 		@include prefixer-pack(
 			(
@@ -54,7 +54,7 @@
 			false
 		);
 
-  }
+	}
 
 	@include prefixer(
 		flex-direction,
