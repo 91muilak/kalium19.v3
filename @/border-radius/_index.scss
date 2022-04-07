@@ -7,7 +7,7 @@
 $border-radius: null !default;
 
 // * Импорты
-@use '../@prefixer' as *;
+@use '../prefixer' as *;
 
 // * Сам миксин
 /// @param $radius значение для свойства border-radius

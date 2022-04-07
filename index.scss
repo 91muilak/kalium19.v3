@@ -5,6 +5,7 @@
 
 @charset "UTF-8";
 
-@forward '@prefixer';
-@forward '@border-radius';
-@forward '@box-shadow';
+@forward '@/prefixer';
+@forward '@/border-radius';
+@forward '@/box-shadow';
+@forward '@/box-sizing';
