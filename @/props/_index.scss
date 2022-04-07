@@ -11,17 +11,18 @@
 	@if $isRoot {
 
 		:root {
-			@each $key, $value in $map {
-				--#{$key}: #{$value};
+			@each $key, $val in $map {
+				--#{$key}: #{$val};
 			}
 		}
 
 	} @else {
 
-		@each $key, $value in $map {
-			--#{$key}: #{$value};
+		@each $key, $val in $map {
+			--#{$key}: #{$val};
 		}
 
 	}
 
 }
+
