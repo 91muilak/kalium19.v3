@@ -1,0 +1,35 @@
+// @license  MIT License
+// @created  2022/04/07 05:19:34
+// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+// @link     https://github.com/rx1310
+
+// * Миксин
+/// @param $name название фрейма
+@mixin keyframes($name) {
+
+	// ? Префикс для WebKit
+	@-webkit-keyframes #{$name} {
+		@content
+	}
+
+	// ? Префикс для Mozilla Firefoz
+	@-moz-keyframes #{$name} {
+		@content
+	}
+
+	// ? Префикс для IE
+	@-ms-keyframes #{$name} {
+		@content
+	}
+
+	// ? Префикс для Opera
+	@-o-keyframes #{$name} {
+		@content
+	}
+
+	// ? Без префикса
+	@keyframes #{$name} {
+		@content
+	}
+	
+}
