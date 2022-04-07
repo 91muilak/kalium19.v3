@@ -1,0 +1,19 @@
+// @license  MIT License
+// @created  2022/04/07 05:44:42
+// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+// @link     https://github.com/rx1310
+
+// * Импорт модулей
+@use '../prefixer' as *;
+
+// * Миксин
+/// @param $params трансформации
+@mixin transform($params...) {
+
+	@include prefixer(
+		transform,
+		$params,
+		o ms moz webkit
+	);
+
+}

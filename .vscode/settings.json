@@ -4,14 +4,14 @@
 	"npm-scripts.showStartNotification": false,
 
 	"files.exclude": {
-		"dist/"          : false,
-		// ".github/"       : true,
-		// ".vscode/"       : true,
-		"node_modules"   : true,
-		".editorconfig"  : true,
-		"package-lock.*" : true,
-		".gitignore"     : true,
-		"LICENSE"        : true
+		".github/"      : true,
+		// ".vscode/"      : true,
+		".editorconfig" : true,
+		".gitignore"    : true,
+		"dist/"         : false,
+		"LICENSE"       : true,
+		"node_modules/" : true,
+		"package-lock.*": true
 	},
 
 	// * Better Comments
@@ -56,11 +56,6 @@
 			"backgroundColor": "transparent",
 			"bold"           : false,
 			"italic"         : false
-		},
-		{
-			"tag"            : "/",
-			"color"          : "#c1c1c1",
-			"italic"         : true
 		}
 	],
 

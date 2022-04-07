@@ -1,0 +1,13 @@
+// @license  MIT License
+// @created  2022/04/07 05:15:46
+// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+// @link     https://github.com/rx1310
+
+// * Миксин
+@mixin important($decs: ()) {
+
+	@each $prop, $val in $decs {
+		#{$prop}: $val !important;
+	}
+
+}

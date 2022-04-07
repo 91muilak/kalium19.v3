@@ -1,0 +1,19 @@
+// @license  MIT License
+// @created  2022/04/07 04:55:58
+// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+// @link     https://github.com/rx1310
+
+// * Импорт модулей
+@use '../prefixer' as *;
+
+// * Миксин
+/// @param $val значение свойства flex-basis
+@mixin flex-basis($val: auto) {
+
+	@include prefixer(
+		flex-basis,
+		$val,
+		webkit
+	);
+
+}

@@ -1,0 +1,28 @@
+// @license  MIT License
+// @created  2022/04/07 05:08:09
+// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+// @link     https://github.com/rx1310
+
+// * Импорт модулей
+@use '../prefixer' as *;
+
+// * Миксин
+/// @param $int значение свойства order
+@mixin order($int: 0) {
+
+	@include prefixer(
+		box-ordinal-group,
+		$int + 1,
+		webkit moz,
+		false
+	);
+
+	@include prefixer(
+		order,
+		$int,
+		webkit
+	);
+
+	-ms-flex-order: $int;
+
+}

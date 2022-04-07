@@ -1,0 +1,62 @@
+// @license  MIT License
+// @created  2022/04/03 14:55:37
+// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+// @link     https://github.com/rx1310
+
+// * Переменные
+$border-radius: null !default;
+
+// * Импорт модулей
+@use '../prefixer' as *;
+
+// * Сам миксин
+/// @param $radius значение для свойства border-radius
+@mixin border-radius($radius: $border-radius) {
+
+	// ? Используется миксин prefixer
+	@include prefixer(
+		border-radius,
+		$radius,
+		webkit moz
+	);
+
+}
+
+// * Расширенная версия миксина
+/// @param $radius-tl значение для свойства border-radius TopLeft
+/// @param $radius-tr значение для свойства border-radius TopRight
+/// @param $radius-br значение для свойства border-radius BottomRight
+/// @param $radius-bl значение для свойства border-radius BottomLeft
+@mixin border-radius($radius-tl: 0, $radius-tr: 0, $radius-br, $radius-bl) {
+
+	/*
+		Top Left:     #{$radius-tl}
+		Top Right:    #{$radius-tr}
+		Bottom Right: #{$radius-br}
+		Bottom Left:  #{$radius-bl}
+	 */
+
+	// ? Генерация свойств для WebKit
+	@include prefixer-pack(
+		(
+			border-top-left-radius: $radius-tl,
+			border-top-right-radius: $radius-tr,
+			border-bottom-right-radius: $radius-br,
+			border-bottom-left-radius: $radius-bl
+		),
+		webkit
+	);
+
+	// ? Отдельно для Mozilla Firefox
+	@include prefixer-pack(
+		(
+			border-radius-topleft: $radius-tl,
+			border-radius-topright: $radius-tr,
+			border-radius-bottomright: $radius-br,
+			border-radius-bottomleft: $radius-bl
+		),
+		moz,
+		false // не генерируем безпрефиксное свойство (его сгенерировал миксин выше для WebKit)
+	);
+
+}

@@ -1,0 +1,21 @@
+// @license  MIT License
+// @created  2022/04/07 05:08:55
+// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+// @link     https://github.com/rx1310
+
+// * Импорт модулей
+@use '../prefixer' as *;
+
+// * Миксин
+/// @param $int значение свойства flex-shrink
+@mixin flex-shrink($int: 0) {
+
+	@include prefixer(
+		flex-shrink,
+		$int,
+		webkit moz
+	);
+
+	-ms-flex: $int;
+
+}

@@ -1,0 +1,65 @@
+// @license  MIT License
+// @created  2022/04/07 04:57:55
+// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+// @link     https://github.com/rx1310
+
+// * Импорт модулей
+@use '../prefixer' as *;
+
+// * Миксин
+/// @param $direction значение свойства box-direction
+@mixin flex-direction($direction: row) {
+
+	@if $direction == row-reverse {
+
+		@include prefixer-pack(
+			(
+				box-direction: reverse,
+				box-orient: horizontal
+			),
+			webkit moz,
+			false
+		);
+
+	} @else if $direction == column {
+
+		@include prefixer-pack(
+			(
+				box-direction: normal,
+				box-orient: vertical
+			),
+			webkit moz,
+			false
+		);
+
+	} @else if $direction == column-reverse {
+
+		@include prefixer-pack(
+			(
+				box-direction: reverse,
+				box-orient: vertical
+			),
+			webkit moz,
+			false
+		);
+
+	} @else {
+
+		@include prefixer-pack(
+			(
+				box-direction: normal,
+				box-orient: horizontal
+			),
+			webkit moz,
+			false
+		);
+
+	}
+
+	@include prefixer(
+		flex-direction,
+		$direction,
+		ms webkit
+	);
+
+}
