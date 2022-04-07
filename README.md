@@ -21,7 +21,7 @@
 [![Количество открытых PR](https://img.shields.io/github/issues-pr-raw/91muilak/kalium19?label=open%20PR%27s)
 ![Количество закрытых PR](https://img.shields.io/github/issues-pr-closed-raw/91muilak/kalium19?label=closed%20PR%27s)](https://github.com/91muilak/kalium19/pulls)
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=91muilak.kalium19)
-![Лицензия](https://img.shields.io/github/license/91muilak/kalium19?label=%20)
+![Лицензия](https://img.shields.io/github/license/91muilak/kalium19)
 
 
 ## 📥 Установка ![](https://img.shields.io/github/package-json/version/91muilak/kalium19/main?label=%20)
