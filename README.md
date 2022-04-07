@@ -21,3 +21,40 @@
 [![Количество открытых PR](https://img.shields.io/github/issues-pr-raw/91muilak/kalium19?label=open%20PR%27s)
 ![Количество закрытых PR](https://img.shields.io/github/issues-pr-closed-raw/91muilak/kalium19?label=closed%20PR%27s)](https://github.com/91muilak/kalium19/pulls)
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=91muilak.kalium19)
+![Лицензия](https://img.shields.io/github/license/91muilak/kalium19?label=%20)
+
+
+## 📥 Установка ![](https://img.shields.io/github/package-json/version/91muilak/kalium19/main?label=%20)
+Выполнить установку Kalium19 можно склонировав весь репозиторий напрямую с GitHub или же установить через пакетный менеджер [npm](https://nodejs.org/en/download/).
+
+1. Подключение через **npm**:
+
+    ```bash
+    npm i @rx1310/kalium19
+    ```
+    и добавьте файл в импорт:
+    ```scss
+    @use 'node_modules/@rx1310/kalium19' as k19;
+    ```
+
+2. **Клонирование** GitHub-репозитория в проект:
+
+    ```bash
+    git clone https://github.com/91muilak/kalium19
+    ```
+    и добавьте файл в импорт:
+    ```scss
+    @use 'kalium19' as k19;
+    ```
+
+    > Для клонирования проекта необходимо иметь установленный [git](https://git-scm.com/downloads). Если он установлен, то просто выполните команду `git clone` в терминале.
+
+3. Клонирование в качестве **субмодуля**:
+
+    ```bash
+    git submodule add https://github.com/91muilak/kalium19
+    ```
+    и добавьте файл в импорт:
+    ```scss
+    @use 'kalium19' as k19;
+    ```
