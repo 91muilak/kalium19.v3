@@ -1,0 +1,19 @@
+// @license  MIT License
+// @created  2022/04/07 05:00:30
+// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+// @link     https://github.com/rx1310
+
+// * Модули
+@use '../prefixer' as *;
+
+// * Миксин
+/// @param $vals значение свойства flex-flow
+@mixin flex-flow($vals: (row nowrap)) {
+
+	@include prefixer(
+		flex-flow,
+		$vals,
+		webkit ms
+	);
+
+}
