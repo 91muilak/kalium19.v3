@@ -1,0 +1,29 @@
+// @license  MIT License
+// @created  2022/04/07 05:29:33
+// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+// @link     https://github.com/rx1310
+
+// * Импорт модулей
+@use '../prefixer' as *;
+@use "sass:map";
+
+// * Миксин
+/// @param $val		 значение свойства opacity
+/// @param $val-ie значение свойства opacity для IE
+@mixin opacity($val) {
+
+	$val-ie: $val * 100;
+
+	@include prefixer(
+		opacity,
+		$val,
+		moz khtml
+	);
+
+	/* for IE 5-7 */
+	filter: alpha(opacity=$val-ie);
+
+	/* for IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$val-ie})";
+
+}
