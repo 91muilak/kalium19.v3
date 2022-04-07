@@ -1,0 +1,27 @@
+// @license  MIT License
+// @created  2022/04/07 04:40:09
+// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+// @link     https://github.com/rx1310
+
+// * Модули
+@use '../prefixer' as *;
+@use 'sass:map';
+
+// * Миксин Flexbox
+@mixin flexbox($type: null) {
+
+	@if $type == inline {
+		display: -webkit-inline-box;
+		display: -moz-inline-box;
+		display: -webkit-inline-flex;
+		display: -ms-inline-flexbox;
+		display: inline-flex;
+	} @else {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+	}
+
+}
