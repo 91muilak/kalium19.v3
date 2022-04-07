@@ -8,8 +8,10 @@
 @use 'sass:map';
 
 @forward 'align-content';
+@forward 'align-items';
 
 // * Миксин Flexbox
+/// @param $type тип контейнера
 @mixin flexbox($type: null) {
 
 	@if $type == inline {

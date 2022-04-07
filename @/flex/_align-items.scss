@@ -1,0 +1,54 @@
+// @license  MIT License
+// @created  2022/04/07 04:51:08
+// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+// @link     https://github.com/rx1310
+
+// * Модули
+@use '../prefixer' as *;
+
+// * Миксин
+/// @param $val значение свойства align-items
+@mixin align-items($val: stretch) {
+
+	@if $val == flex-start {
+
+		@include prefixer(
+			box-align,
+			start,
+			webkit moz,
+			false
+		);
+
+		-ms-flex-align: start;
+
+	} @else if $val == flex-end {
+
+		@include prefixer(
+			box-align,
+			end,
+			webkit moz,
+			false
+		);
+
+		-ms-flex-align: end;
+
+	} @else {
+
+		@include prefixer(
+			box-align,
+			$val,
+			webkit moz,
+			false
+		);
+
+		-ms-flex-align: $val;
+
+	}
+
+	@include prefixer(
+		align-items,
+		$val,
+		webkit
+	);
+
+}
