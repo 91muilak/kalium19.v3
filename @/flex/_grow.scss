@@ -7,7 +7,7 @@
 @use '../prefixer' as *;
 
 // * Миксин
-/// @param $int значение свойства flex-glow
+/// @param $int значение свойства flex-grow
 @mixin flex-grow($int: 1) {
 
 	@include prefixer(
