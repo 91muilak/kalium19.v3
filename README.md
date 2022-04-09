@@ -1,4 +1,4 @@
-<img title="Логотип проекта" src=".github/logo.png" alt="Logo" width="100px" align="right" /> Kalium19 ![](https://img.shields.io/github/package-json/version/91muilak/kalium19/main?label=%20)
+<img title="Логотип проекта" src=".github/logo.png" alt="Logo" width="100px" align="right" /> Kalium19 [![Список изменений](https://img.shields.io/github/package-json/version/91muilak/kalium19/main?label=%20)](CHANGELOG.md)
 ======
 :package: Набор утилит, миксинов, расширений на языке препроцессора [SASS](https://github.com/sass) для помощи в ускорении и упрощении написания CSS-стилей.
 
