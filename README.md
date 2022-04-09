@@ -37,6 +37,35 @@
     @use 'node_modules/@rx1310/kalium19' as k19;
     ```
 
+    > Пример из реального проекта:
+    > ```scss
+    > @use '../node_modules/@rx1310/kalium19' as k19 with (
+    >   $border-radius: 12px,
+    >   $border-radius-prefixes: webkit moz,
+    >   $tab-size-prefixes: o moz,
+    >   $transform-prefixes: o ms moz webkit,
+    >   $transition-prefixes: o moz webkit,
+    >
+    >   $bem: (
+    >     element: '__',
+    >     modifier: '--'
+    >   ),
+    >
+    >   $opacity: (
+    >     supportIE7: true,
+    >     supportIE8: true
+    >   ),
+    >
+    >   $keyframes: (
+    >     supportIE: false,
+    >     supportMozilla: false,
+    >     supportOpera: false,
+    >     supportWebkit: false,
+    >   ),
+    >
+    > );
+    > ```
+
 2. **Клонирование** GitHub-репозитория в проект:
 
     ```bash

@@ -5,6 +5,7 @@
 
 // * Переменные
 $border-radius: null !default;
+$border-radius-prefixes: webkit moz !default;
 
 // * Импорт модулей
 @use '../prefixer' as *;
@@ -17,7 +18,7 @@ $border-radius: null !default;
 	@include prefixer(
 		border-radius,
 		$radius,
-		webkit moz
+		$border-radius-prefixes
 	);
 
 }
@@ -28,9 +29,13 @@ $border-radius: null !default;
 /// @param $radius значение закругления
 @mixin border-corner-radius($vr, $hr, $radius: $border-radius) {
 
-	-webkit-border-#{$vr}-#{$hr}-radius: $radius;
+	@include prefixer(
+		border-#{$vr}-#{$hr}-radius,
+		$radius,
+		webkit
+	);
+
 	-moz-border-radius-#{$vr}#{$hr}: $radius;
-	border-#{$vr}-#{$hr}-radius: $radius;
 
 }
 

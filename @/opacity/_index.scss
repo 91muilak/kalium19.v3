@@ -7,6 +7,12 @@
 @use '../prefixer' as *;
 @use "sass:map";
 
+// * Переменные
+$opacity: (
+	supportIE8: true,
+	supportIE7: true
+) !default;
+
 // * Миксин
 /// @param $val		 значение свойства opacity
 /// @param $val-ie значение свойства opacity для IE
@@ -20,10 +26,14 @@
 		moz khtml
 	);
 
-	/* for IE 5-7 */
-	filter: alpha(opacity=$val-ie);
+	@if map.get($opacity, supportIE7) {
+		/* for IE 5-7 */
+		filter: alpha(opacity=$val-ie);
+	}
 
-	/* for IE 8 */
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$val-ie})";
+	@if map.get($opacity, supportIE8) {
+		/* for IE 8 */
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$val-ie})";
+	}
 
 }

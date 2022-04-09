@@ -6,6 +6,9 @@
 // * Импорт модулей
 @use '../prefixer' as *;
 
+// * Переменные
+$tab-size-prefixes: o moz !default;
+
 // * Миксин
 /// @param $size значение свойства tab-size
 @mixin tab-size($size) {
@@ -13,7 +16,7 @@
 	@include prefixer(
 		tab-size,
 		$size,
-		o moz
+		$tab-size-prefixes
 	);
 
 }
