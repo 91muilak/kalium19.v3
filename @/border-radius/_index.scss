@@ -5,6 +5,7 @@
 
 // * Переменные
 $border-radius: null !default;
+$border-radius-prefixes: webkit moz !default;
 
 // * Импорт модулей
 @use '../prefixer' as *;
@@ -17,7 +18,7 @@ $border-radius: null !default;
 	@include prefixer(
 		border-radius,
 		$radius,
-		webkit moz
+		$border-radius-prefixes
 	);
 
 }
