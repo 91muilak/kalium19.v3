@@ -4,40 +4,38 @@
 // @link     https://github.com/rx1310
 
 // * Переменные
-$keyframes: (
-	supportIE: true,
-	supportMozilla: true,
-	supportOpera: true,
-	supportWebkit: true,
-) !default;
+$keyframes-webkit: true !default;
+$keyframes-moz   : true !default;
+$keyframes-ms    : true !default;
+$keyframes-o     : true !default;
 
 // * Миксин
 /// @param $name название фрейма
 @mixin keyframes($name) {
 
 	// ? Префикс для WebKit
-	@if map-get($keyframes, supportWebkit) {
+	@if $keyframes-webkit == true {
 		@-webkit-keyframes #{$name} {
 			@content
 		}
 	}
 
 	// ? Префикс для Mozilla Firefox
-	@if map-get($keyframes, supportMozilla) {
+	@if $keyframes-moz == true {
 		@-moz-keyframes #{$name} {
 			@content
 		}
 	}
 
 	// ? Префикс для IE
-	@if map-get($keyframes, supportIE) {
+	@if $keyframes-ms == true {
 		@-ms-keyframes #{$name} {
 			@content
 		}
 	}
 
 	// ? Префикс для Opera
-	@if map-get($keyframes, supportOpera) {
+	@if $keyframes-o == true {
 		@-o-keyframes #{$name} {
 			@content
 		}
