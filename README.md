@@ -40,28 +40,26 @@
     > Пример из реального проекта:
     > ```scss
     > @use '../node_modules/@rx1310/kalium19' as k19 with (
-    >   $border-radius: 12px,
-    >   $border-radius-prefixes: webkit moz,
-    >   $tab-size-prefixes: o moz,
-    >   $transform-prefixes: o ms moz webkit,
-    >   $transition-prefixes: o moz webkit,
     >
-    >   $bem: (
-    >     element: '__',
-    >     modifier: '--'
-    >   ),
+    >  $border-radius: 12px,
     >
-    >   $opacity: (
-    >     supportIE7: true,
-    >     supportIE8: true
-    >   ),
+    >  $bem: (
+    >    element: '__',
+    >    modifier: '--'
+    >  ),
     >
-    >   $keyframes: (
-    >     supportIE: false,
-    >     supportMozilla: false,
-    >     supportOpera: false,
-    >     supportWebkit: false,
-    >   ),
+    >  $opacity-ie5: true,
+    >  $opacity-ie8: true,
+    >  $opacity-prefixes: moz khtml,
+    >
+    >  $keyframes-webkit: true,
+    >  $keyframes-moz   : true,
+    >  $keyframes-ms    : true,
+    >  $keyframes-o     : true,
+    >
+    >  $transition-prefixes: o moz webkit,
+    >  $transform-prefixes: o ms moz webkit,
+    >  $tab-size-prefixes: o moz,
     >
     > );
     > ```
