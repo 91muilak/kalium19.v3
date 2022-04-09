@@ -6,6 +6,9 @@
 // * Импорт модулей
 @use '../prefixer' as *;
 
+// * Переменные
+$prefixes_flex-flow: webkit ms !default;
+
 // * Миксин
 /// @param $vals значение свойства flex-flow
 @mixin flex-flow($vals: (row nowrap)) {
@@ -13,7 +16,7 @@
 	@include prefixer(
 		flex-flow,
 		$vals,
-		webkit ms
+		$prefixes_flex-flow
 	);
 
 }

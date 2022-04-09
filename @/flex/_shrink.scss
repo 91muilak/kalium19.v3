@@ -6,6 +6,9 @@
 // * Импорт модулей
 @use '../prefixer' as *;
 
+// * Переменные
+$prefixes_flex-shrink: webkit moz !default;
+
 // * Миксин
 /// @param $int значение свойства flex-shrink
 @mixin flex-shrink($int: 0) {
@@ -13,7 +16,7 @@
 	@include prefixer(
 		flex-shrink,
 		$int,
-		webkit moz
+		$prefixes_flex-shrink
 	);
 
 	-ms-flex: $int;

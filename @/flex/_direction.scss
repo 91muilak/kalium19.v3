@@ -6,6 +6,10 @@
 // * Импорт модулей
 @use '../prefixer' as *;
 
+// * Переменные
+$prefixes_flex-direction: webkit ms !default;
+$prefixes_box-direction: webkit moz !default;
+
 // * Миксин
 /// @param $direction значение свойства box-direction
 @mixin flex-direction($direction: row) {
@@ -17,7 +21,7 @@
 				box-direction: reverse,
 				box-orient: horizontal
 			),
-			webkit moz,
+			$prefixes_box-direction,
 			false
 		);
 
@@ -28,7 +32,7 @@
 				box-direction: normal,
 				box-orient: vertical
 			),
-			webkit moz,
+			$prefixes_box-direction,
 			false
 		);
 
@@ -39,7 +43,7 @@
 				box-direction: reverse,
 				box-orient: vertical
 			),
-			webkit moz,
+			$prefixes_box-direction,
 			false
 		);
 
@@ -50,7 +54,7 @@
 				box-direction: normal,
 				box-orient: horizontal
 			),
-			webkit moz,
+			$prefixes_box-direction,
 			false
 		);
 
@@ -59,7 +63,7 @@
 	@include prefixer(
 		flex-direction,
 		$direction,
-		ms webkit
+		$prefixes_flex-direction
 	);
 
 }

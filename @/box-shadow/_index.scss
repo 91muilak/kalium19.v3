@@ -6,6 +6,9 @@
 // * Импорт модулей
 @use '../prefixer' as *;
 
+// * Переменные
+$prefixes_box-shadow: webkit moz !default;
+
 // * Миксин
 /// @param $params список значений
 @mixin box-shadow($params...) {
@@ -13,7 +16,7 @@
 	@include prefixer(
 		box-shadow,
 		$params,
-		webkit moz
+		$prefixes_box-shadow
 	);
 
 }

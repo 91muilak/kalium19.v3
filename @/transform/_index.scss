@@ -7,7 +7,7 @@
 @use '../prefixer' as *;
 
 // * Переменные
-$transform-prefixes: o ms moz webkit !default;
+$prefixes_transform: o ms moz webkit !default;
 
 // * Миксин
 /// @param $params трансформации
@@ -16,7 +16,7 @@ $transform-prefixes: o ms moz webkit !default;
 	@include prefixer(
 		transform,
 		$params,
-		$transform-prefixes
+		$prefixes_transform
 	);
 
 }

@@ -6,6 +6,10 @@
 // * Импорт модулей
 @use '../prefixer' as *;
 
+// * Переменные
+$prefixes_box-flex : webkit moz !default;
+$prefixes_flex-grow: webkit !default;
+
 // * Миксин
 /// @param $int значение свойства flex-grow
 @mixin flex-grow($int: 1) {
@@ -13,14 +17,14 @@
 	@include prefixer(
 		box-flex,
 		$int,
-		webkit moz,
+		$prefixes_box-flex,
 		false
 	);
 
 	@include prefixer(
 		flex-grow,
 		$int,
-		webkit
+		$prefixes_flex-grow
 	);
 
 	-ms-flex: $int;

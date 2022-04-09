@@ -7,7 +7,7 @@
 @use '../prefixer' as *;
 
 // * Переменные
-$tab-size-prefixes: o moz !default;
+$prefixes_tab-size: o moz !default;
 
 // * Миксин
 /// @param $size значение свойства tab-size
@@ -16,7 +16,7 @@ $tab-size-prefixes: o moz !default;
 	@include prefixer(
 		tab-size,
 		$size,
-		$tab-size-prefixes
+		$prefixes_tab-size
 	);
 
 }

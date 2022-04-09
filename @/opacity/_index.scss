@@ -10,7 +10,7 @@
 // * Переменные
 $opacity-ie5: true !default;
 $opacity-ie8: true !default;
-$opacity-prefixes: moz khtml !default;
+$prefixes_opacity: moz khtml !default;
 
 // * Миксин
 /// @param $val		 значение свойства opacity
@@ -22,7 +22,7 @@ $opacity-prefixes: moz khtml !default;
 	@include prefixer(
 		opacity,
 		$val,
-		$opacity-prefixes
+		$prefixes_opacity
 	);
 
 	@if $opacity-ie5 == true {
