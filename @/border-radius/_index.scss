@@ -28,9 +28,13 @@ $border-radius: null !default;
 /// @param $radius значение закругления
 @mixin border-corner-radius($vr, $hr, $radius: $border-radius) {
 
-	-webkit-border-#{$vr}-#{$hr}-radius: $radius;
+	@include prefixer(
+		border-#{$vr}-#{$hr}-radius,
+		$radius,
+		webkit
+	);
+
 	-moz-border-radius-#{$vr}#{$hr}: $radius;
-	border-#{$vr}-#{$hr}-radius: $radius;
 
 }
 
