@@ -3,28 +3,44 @@
 // @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
 // @link     https://github.com/rx1310
 
+// * Переменные
+$keyframes: (
+	supportIE: true,
+	supportMozilla: true,
+	supportOpera: true,
+	supportWebkit: true,
+) !default;
+
 // * Миксин
 /// @param $name название фрейма
 @mixin keyframes($name) {
 
 	// ? Префикс для WebKit
-	@-webkit-keyframes #{$name} {
-		@content
+	@if map-get($keyframes, supportWebkit) {
+		@-webkit-keyframes #{$name} {
+			@content
+		}
 	}
 
-	// ? Префикс для Mozilla Firefoz
-	@-moz-keyframes #{$name} {
-		@content
+	// ? Префикс для Mozilla Firefox
+	@if map-get($keyframes, supportMozilla) {
+		@-moz-keyframes #{$name} {
+			@content
+		}
 	}
 
 	// ? Префикс для IE
-	@-ms-keyframes #{$name} {
-		@content
+	@if map-get($keyframes, supportIE) {
+		@-ms-keyframes #{$name} {
+			@content
+		}
 	}
 
 	// ? Префикс для Opera
-	@-o-keyframes #{$name} {
-		@content
+	@if map-get($keyframes, supportOpera) {
+		@-o-keyframes #{$name} {
+			@content
+		}
 	}
 
 	// ? Без префикса
