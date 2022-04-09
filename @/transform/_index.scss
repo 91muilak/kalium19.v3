@@ -6,6 +6,9 @@
 // * Импорт модулей
 @use '../prefixer' as *;
 
+// * Переменные
+$transform-prefixes: o ms moz webkit !default;
+
 // * Миксин
 /// @param $params трансформации
 @mixin transform($params...) {
@@ -13,7 +16,7 @@
 	@include prefixer(
 		transform,
 		$params,
-		o ms moz webkit
+		$transform-prefixes
 	);
 
 }

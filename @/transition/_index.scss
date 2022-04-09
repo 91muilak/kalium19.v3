@@ -6,6 +6,9 @@
 // * Импорт модулей
 @use '../prefixer' as *;
 
+// * Переменные
+$transition-prefixes: o moz webkit !default;
+
 // * Миксин
 /// @param $params список переходов
 @mixin transition($params...) {
@@ -13,7 +16,7 @@
 	@include prefixer(
 		transition,
 		$params,
-		o moz webkit
+		$transition-prefixes
 	);
 
 }
