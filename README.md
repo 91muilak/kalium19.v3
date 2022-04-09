@@ -1,4 +1,4 @@
-<img title="Логотип проекта" src=".github/logo.png" alt="Logo" width="100px" align="right" /> Kalium19 ![](https://img.shields.io/github/package-json/version/91muilak/kalium19?label=%20)
+<img title="Логотип проекта" src=".github/logo.png" alt="Logo" width="100px" align="right" /> Kalium19 ![](https://img.shields.io/github/package-json/version/91muilak/kalium19/main?label=%20)
 ======
 :package: Набор утилит, миксинов, расширений на языке препроцессора [SASS](https://github.com/sass) для помощи в ускорении и упрощении написания CSS-стилей.
 
@@ -24,7 +24,7 @@
 ![Лицензия](https://img.shields.io/github/license/91muilak/kalium19)
 
 
-## 📥 Установка ![](https://img.shields.io/github/package-json/version/91muilak/kalium19/main?label=%20)
+## 📥 Установка
 Выполнить установку Kalium19 можно склонировав весь репозиторий напрямую с GitHub или же установить через пакетный менеджер [npm](https://nodejs.org/en/download/).
 
 1. Подключение через **npm**:
