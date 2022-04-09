@@ -6,6 +6,10 @@
 // * Импорт модулей
 @use '../prefixer' as *;
 
+// * Переменные
+$prefixes_box-align  : webkit moz !default;
+$prefixes_align-items: webkit !default;
+
 // * Миксин
 /// @param $val значение свойства align-items
 @mixin align-items($val: stretch) {
@@ -15,7 +19,7 @@
 		@include prefixer(
 			box-align,
 			start,
-			webkit moz,
+			$prefixes_box-align,
 			false
 		);
 
@@ -26,7 +30,7 @@
 		@include prefixer(
 			box-align,
 			end,
-			webkit moz,
+			$prefixes_box-align,
 			false
 		);
 
@@ -37,7 +41,7 @@
 		@include prefixer(
 			box-align,
 			$val,
-			webkit moz,
+			$prefixes_box-align,
 			false
 		);
 
@@ -48,7 +52,7 @@
 	@include prefixer(
 		align-items,
 		$val,
-		webkit
+		$prefixes_align-items
 	);
 
 }

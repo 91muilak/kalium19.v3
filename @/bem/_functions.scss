@@ -9,7 +9,7 @@
 
 	$selector: selectorToString($selector);
 
-	@if str-index($selector, map.get($bem, modifier)) {
+	@if str-index($selector, $bem-modifier) {
 			@return true;
 	} @else {
 			@return false;
@@ -29,7 +29,7 @@
 @function getBlock($selector) {
 
 	$selector: selectorToString($selector);
-	$modifierStart: str-index($selector, map.get($bem, modifier)) - 1;
+	$modifierStart: str-index($selector, $bem-modifier) - 1;
 
 	@return str-slice($selector, 0, $modifierStart);
 

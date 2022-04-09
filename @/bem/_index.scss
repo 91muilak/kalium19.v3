@@ -10,10 +10,8 @@
 @import 'functions';
 
 // * Переменные
-$bem: (
-	element: '_',
-	modifier: '-'
-) !default;
+$bem-element: '__' !default;
+$bem-modifier: '--' !default;
 
 // * Миксин Block
 @mixin b($block) {
@@ -33,7 +31,7 @@ $bem: (
 
 		@at-root {
 			#{$selector} {
-				#{$block + map.get($bem, element) + $element} {
+				#{$block + $bem-element + $element} {
 					@content;
 				}
 			}
@@ -42,7 +40,7 @@ $bem: (
 	} @else {
 
 		@at-root {
-			#{$selector + map.get($bem, element) + $element } {
+			#{$selector + $bem-element + $element } {
 				@content;
 			}
 		}
@@ -54,7 +52,7 @@ $bem: (
 // * Миксин Modifier
 @mixin m($modifier) {
 	@at-root {
-		#{&}#{ map.get($bem, modifier) + $modifier } {
+		#{&}#{ $bem-modifier + $modifier } {
 			@content;
 		}
 	}

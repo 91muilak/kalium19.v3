@@ -4,7 +4,7 @@
 // @link     https://github.com/rx1310
 
 // * Переменные
-$prefixes-legacy: (
+$prefixes_legacy: (
 	webkit,
 	khtml,
 	moz,
@@ -19,7 +19,7 @@ $prefixes-legacy: (
 
 	// ? Проходим по списку $prefixes и добавляем
 	// ? префиксы по очереди.
-	@each $prefix in $prefixes-legacy {
+	@each $prefix in $prefixes_legacy {
 		-#{$prefix}-#{$prop}: #{$val};
 	}
 

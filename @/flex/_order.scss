@@ -6,6 +6,10 @@
 // * Импорт модулей
 @use '../prefixer' as *;
 
+// * Переменные
+$prefixes_box-ordinal-group: webkit moz !default;
+$prefixes_order: webkit !default;
+
 // * Миксин
 /// @param $int значение свойства order
 @mixin order($int: 0) {
@@ -13,14 +17,14 @@
 	@include prefixer(
 		box-ordinal-group,
 		$int + 1,
-		webkit moz,
+		$prefixes_box-ordinal-group,
 		false
 	);
 
 	@include prefixer(
 		order,
 		$int,
-		webkit
+		$prefixes_order
 	);
 
 	-ms-flex-order: $int;

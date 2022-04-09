@@ -1,4 +1,4 @@
-<img title="Логотип проекта" src=".github/logo.png" alt="Logo" width="100px" align="right" /> Kalium19 ![](https://img.shields.io/github/package-json/version/91muilak/kalium19?label=%20)
+<img title="Логотип проекта" src=".github/logo.png" alt="Logo" width="100px" align="right" /> Kalium19 [![Список изменений](https://img.shields.io/github/package-json/version/91muilak/kalium19/main?label=%20)](CHANGELOG.md)
 ======
 :package: Набор утилит, миксинов, расширений на языке препроцессора [SASS](https://github.com/sass) для помощи в ускорении и упрощении написания CSS-стилей.
 
@@ -24,7 +24,7 @@
 ![Лицензия](https://img.shields.io/github/license/91muilak/kalium19)
 
 
-## 📥 Установка ![](https://img.shields.io/github/package-json/version/91muilak/kalium19/main?label=%20)
+## 📥 Установка
 Выполнить установку Kalium19 можно склонировав весь репозиторий напрямую с GitHub или же установить через пакетный менеджер [npm](https://nodejs.org/en/download/).
 
 1. Подключение через **npm**:
@@ -40,27 +40,11 @@
     > Пример из реального проекта:
     > ```scss
     > @use '../node_modules/@rx1310/kalium19' as k19 with (
-    >
-    >  $border-radius: 12px,
-    >
-    >  $bem: (
-    >    element: '__',
-    >    modifier: '--'
-    >  ),
-    >
-    >  $opacity-ie5: true,
-    >  $opacity-ie8: true,
-    >  $opacity-prefixes: moz khtml,
-    >
-    >  $keyframes-webkit: true,
-    >  $keyframes-moz   : true,
-    >  $keyframes-ms    : true,
-    >  $keyframes-o     : true,
-    >
-    >  $transition-prefixes: o moz webkit,
-    >  $transform-prefixes: o ms moz webkit,
-    >  $tab-size-prefixes: o moz,
-    >
+    >   $border-radius: .8em,
+	  >   $bem-element: '__',
+	  >   $bem-modifier: '--',
+	  >   $opacity-ie5: false,
+	  >   $keyframes-o: false
     > );
     > ```
 
