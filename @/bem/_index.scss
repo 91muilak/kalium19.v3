@@ -1,11 +1,17 @@
-@import 'functions';
-@import 'vars';
+/// Модули
+@use 'functions' as *;
+
+/// @access public
+/// @param {string} $bem-element - разделитель элемента
+/// @param {string} $bem-modifier - разделитель мофификатора
+$bem-element : '__' !default;
+$bem-modifier: '--' !default;
 
 /// @name Block
 /// @author Marcmintel
 /// @link https://medium.com/@marcmintel/pushing-bem-to-the-next-level-with-sass-3-4-5239d2371321
 /// @access public
-/// @param $block
+/// @arg $block
 @mixin b($block) {
 	.#{$block} {
 		@content;
@@ -16,7 +22,7 @@
 /// @author Marcmintel
 /// @link https://medium.com/@marcmintel/pushing-bem-to-the-next-level-with-sass-3-4-5239d2371321
 /// @access public
-/// @param $element - название элемента
+/// @arg $element - название элемента
 @mixin e($element) {
 
 	/// @access private
@@ -25,11 +31,14 @@
 
 	/// @require {function} containsModifier from _functions.scss
 	/// @arg $selector
-	@if containsModifier($selector) {
+	/// @arg $bem-modifier
+	@if containsModifier($selector, $bem-modifier) {
 
 		/// @access private
 		/// @param {string} $block
-		$block: getBlock($selector);
+		/// @arg $selector
+		/// @arg $bem-modifier
+		$block: getBlock($selector, $bem-modifier);
 
 		@at-root {
 			#{$selector} {
@@ -55,7 +64,7 @@
 /// @author Marcmintel
 /// @link https://medium.com/@marcmintel/pushing-bem-to-the-next-level-with-sass-3-4-5239d2371321
 /// @access public
-/// @param $modifier - название модификатора
+/// @arg $modifier - название модификатора
 @mixin m($modifier) {
 	@at-root {
 		#{&}#{ $bem-modifier + $modifier } {
