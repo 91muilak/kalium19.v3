@@ -1,32 +1,34 @@
-// @license  MIT License
-// @created  2022/04/07 06:02:11
-// @author   Marcmintel
-// @link     https://medium.com/@marcmintel/pushing-bem-to-the-next-level-with-sass-3-4-5239d2371321
-
-// * Импорт модулей
-@use 'sass:map';
-
-// ! Устаревший вариант импорта модулей
 @import 'functions';
+@import 'vars';
 
-// * Переменные
-$bem-element: '__' !default;
-$bem-modifier: '--' !default;
-
-// * Миксин Block
+/// @name Block
+/// @author Marcmintel
+/// @link https://medium.com/@marcmintel/pushing-bem-to-the-next-level-with-sass-3-4-5239d2371321
+/// @access public
+/// @param $block
 @mixin b($block) {
 	.#{$block} {
 		@content;
 	}
 }
 
-// * Миксин Element
+/// @name Element
+/// @author Marcmintel
+/// @link https://medium.com/@marcmintel/pushing-bem-to-the-next-level-with-sass-3-4-5239d2371321
+/// @access public
+/// @param $element - название элемента
 @mixin e($element) {
 
+	/// @access private
+	/// @param {string} $selector
 	$selector: &;
 
+	/// @require {function} containsModifier from _functions.scss
+	/// @arg $selector
 	@if containsModifier($selector) {
 
+		/// @access private
+		/// @param {string} $block
 		$block: getBlock($selector);
 
 		@at-root {
@@ -49,7 +51,11 @@ $bem-modifier: '--' !default;
 
 }
 
-// * Миксин Modifier
+/// @name Modifier
+/// @author Marcmintel
+/// @link https://medium.com/@marcmintel/pushing-bem-to-the-next-level-with-sass-3-4-5239d2371321
+/// @access public
+/// @param $modifier - название модификатора
 @mixin m($modifier) {
 	@at-root {
 		#{&}#{ $bem-modifier + $modifier } {
