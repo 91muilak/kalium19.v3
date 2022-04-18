@@ -1,20 +1,21 @@
-// @license  MIT License
-// @created  2022/04/03 14:55:37
-// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
-// @link     https://github.com/rx1310
+@use '../prefixer' as *;
 
-// * Переменные
+/// @access public
+/// @param {int}  $border-radius - значение свойства `border-radius`
+/// @param {list} $prefixes_border-radius - список префиксов
 $border-radius: null !default;
 $prefixes_border-radius: webkit moz !default;
 
-// * Импорт модулей
-@use '../prefixer' as *;
-
-// * Сам миксин
-/// @param $radius значение для свойства border-radius
+/// @name BorderRadius
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @arg $radius - значение для свойства border-radius
 @mixin border-radius($radius: $border-radius) {
 
-	// ? Используется миксин prefixer
+	/// @require Prefixer
+	/// @arg border-radius - свойство `border-radius`, к которому добавляются префиксы
+	/// @arg $radius - значение свойства `border-radius`
+	/// @arg $prefixes_border-radius - список префиксов
 	@include prefixer(
 		border-radius,
 		$radius,
@@ -23,18 +24,24 @@ $prefixes_border-radius: webkit moz !default;
 
 }
 
-// ? Расширенная версия миксина
-/// @param $vr     вертикальная сторона
-/// @param $hr     горозонтальная сторона
-/// @param $radius значение закругления
+/// @name BorderRadiusExtended
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @arg $vr - скругления сверху и снизу
+/// @arg $hr - скругления по бокам
+/// @arg $radius - радиус скругления
 @mixin border-corner-radius($vr, $hr, $radius: $border-radius) {
 
+	/// @require Prefixer
+	/// @arg $radius - значение свойства `border-radius`
+	/// @arg webkit - префикс для браузеров на WebKit'е
 	@include prefixer(
 		border-#{$vr}-#{$hr}-radius,
 		$radius,
 		webkit
 	);
 
+	/// отдельно для браузеров Mozilla FF
 	-moz-border-radius-#{$vr}#{$hr}: $radius;
 
 }
