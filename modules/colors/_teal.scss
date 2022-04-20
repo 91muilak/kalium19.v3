@@ -1,8 +1,9 @@
-// @license  MIT License
-// @created  2022/04/07 04:14:30
-// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
-// @link     https://github.com/rx1310
-
+/// * Цвет Teal
+/// @name color-teal
+/// @name Colors
+/// @author Google
+/// @link https://material.io/design/color/the-color-system.html
+/// @param {map} $teal
 $teal: (
 	50: #e0f2f1,
 	100: #b2dfdb,
@@ -20,16 +21,31 @@ $teal: (
 	A700: #00bfa5
 );
 
-$teal--50: #e0f2f1;
-$teal--100: #b2dfdb;
-$teal--200: #80cbc4;
-$teal--300: #4db6ac;
-$teal--400: #26a69a;
-$teal--500: #009688;
-$teal--600: #00897b;
-$teal--700: #00796b;
-$teal--800: #00695c;
-$teal--900: #004d40;
+/// @param {color} $teal--50
+/// @param {color} $teal--100
+/// @param {color} $teal--200
+/// @param {color} $teal--300
+/// @param {color} $teal--400
+/// @param {color} $teal--500
+/// @param {color} $teal--600
+/// @param {color} $teal--700
+/// @param {color} $teal--800
+/// @param {color} $teal--900
+/// @param {color} $teal--A100
+/// @param {color} $teal--A200
+/// @param {color} $teal--A400
+/// @param {color} $teal--A700
+
+$teal--50  : #e0f2f1;
+$teal--100 : #b2dfdb;
+$teal--200 : #80cbc4;
+$teal--300 : #4db6ac;
+$teal--400 : #26a69a;
+$teal--500 : #009688;
+$teal--600 : #00897b;
+$teal--700 : #00796b;
+$teal--800 : #00695c;
+$teal--900 : #004d40;
 $teal--A100: #a7ffeb;
 $teal--A200: #64ffda;
 $teal--A400: #1de9b6;

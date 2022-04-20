@@ -1,8 +1,9 @@
-// @license  MIT License
-// @created  2022/04/07 04:13:58
-// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
-// @link     https://github.com/rx1310
-
+/// * Цвет Red
+/// @name color-red
+/// @name Colors
+/// @author Google
+/// @link https://material.io/design/color/the-color-system.html
+/// @param {map} $red
 $red: (
 	50: #ffebee,
 	100: #ffcdd2,
@@ -20,16 +21,32 @@ $red: (
 	A700: #d50000
 );
 
-$red--50: #ffebee;
-$red--100: #ffcdd2;
-$red--200: #ef9a9a;
-$red--300: #e57373;
-$red--400: #ef5350;
-$red--500: #f44336;
-$red--600: #e53935;
-$red--700: #d32f2f;
-$red--800: #c62828;
-$red--900: #b71c1c;
+
+/// @param {color} $red--50
+/// @param {color} $red--100
+/// @param {color} $red--200
+/// @param {color} $red--300
+/// @param {color} $red--400
+/// @param {color} $red--500
+/// @param {color} $red--600
+/// @param {color} $red--700
+/// @param {color} $red--800
+/// @param {color} $red--900
+/// @param {color} $red--A100
+/// @param {color} $red--A200
+/// @param {color} $red--A400
+/// @param {color} $red--A700
+
+$red--50  : #ffebee;
+$red--100 : #ffcdd2;
+$red--200 : #ef9a9a;
+$red--300 : #e57373;
+$red--400 : #ef5350;
+$red--500 : #f44336;
+$red--600 : #e53935;
+$red--700 : #d32f2f;
+$red--800 : #c62828;
+$red--900 : #b71c1c;
 $red--A100: #ff8a80;
 $red--A200: #ff5252;
 $red--A400: #ff1744;

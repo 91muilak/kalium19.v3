@@ -1,8 +1,9 @@
-// @license  MIT License
-// @created  2022/04/07 04:12:41
-// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
-// @link     https://github.com/rx1310
-
+/// * Цвет Pink
+/// @name color-pink
+/// @name Colors
+/// @author Google
+/// @link https://material.io/design/color/the-color-system.html
+/// @param {map} $pink
 $pink: (
 	50: #fce4ec,
 	100: #f8bbd0,
@@ -20,16 +21,31 @@ $pink: (
 	A700: #c51162
 );
 
-$pink--50: #fce4ec;
-$pink--100: #f8bbd0;
-$pink--200: #f48fb1;
-$pink--300: #f06292;
-$pink--400: #ec407a;
-$pink--500: #e91e63;
-$pink--600: #d81b60;
-$pink--700: #c2185b;
-$pink--800: #ad1457;
-$pink--900: #880e4f;
+/// @param {color} $pink--50
+/// @param {color} $pink--100
+/// @param {color} $pink--200
+/// @param {color} $pink--300
+/// @param {color} $pink--400
+/// @param {color} $pink--500
+/// @param {color} $pink--600
+/// @param {color} $pink--700
+/// @param {color} $pink--800
+/// @param {color} $pink--900
+/// @param {color} $pink--A100
+/// @param {color} $pink--A200
+/// @param {color} $pink--A400
+/// @param {color} $pink--A700
+
+$pink--50  : #fce4ec;
+$pink--100 : #f8bbd0;
+$pink--200 : #f48fb1;
+$pink--300 : #f06292;
+$pink--400 : #ec407a;
+$pink--500 : #e91e63;
+$pink--600 : #d81b60;
+$pink--700 : #c2185b;
+$pink--800 : #ad1457;
+$pink--900 : #880e4f;
 $pink--A100: #ff80ab;
 $pink--A200: #ff4081;
 $pink--A400: #f50057;

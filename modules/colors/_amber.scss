@@ -1,8 +1,9 @@
-// @license  MIT License
-// @created  2022/04/07 03:59:14
-// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
-// @link     https://github.com/rx1310
-
+/// * Цвет Amber
+/// @name color-amber
+/// @name Colors
+/// @author Google
+/// @link https://material.io/design/color/the-color-system.html
+/// @param {map} $amber
 $amber: (
 	50: #fff8e1,
 	100: #ffecb3,
@@ -20,16 +21,32 @@ $amber: (
 	A700: #ffab00
 );
 
-$amber--50: #fff8e1;
-$amber--100: #ffecb3;
-$amber--200: #ffe082;
-$amber--300: #ffd54f;
-$amber--400: #ffca28;
-$amber--500: #ffc107;
-$amber--600: #ffb300;
-$amber--700: #ffa000;
-$amber--800: #ff8f00;
-$amber--900: #ff6f00;
+
+/// @param {color} $amber--50
+/// @param {color} $amber--100
+/// @param {color} $amber--200
+/// @param {color} $amber--300
+/// @param {color} $amber--400
+/// @param {color} $amber--500
+/// @param {color} $amber--600
+/// @param {color} $amber--700
+/// @param {color} $amber--800
+/// @param {color} $amber--900
+/// @param {color} $amber--A100
+/// @param {color} $amber--A200
+/// @param {color} $amber--A400
+/// @param {color} $amber--A700
+
+$amber--50  : #fff8e1;
+$amber--100 : #ffecb3;
+$amber--200 : #ffe082;
+$amber--300 : #ffd54f;
+$amber--400 : #ffca28;
+$amber--500 : #ffc107;
+$amber--600 : #ffb300;
+$amber--700 : #ffa000;
+$amber--800 : #ff8f00;
+$amber--900 : #ff6f00;
 $amber--A100: #ffe57f;
 $amber--A200: #ffd740;
 $amber--A400: #ffc400;

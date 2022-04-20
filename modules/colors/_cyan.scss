@@ -1,8 +1,9 @@
-// @license  MIT License
-// @created  2022/04/07 04:05:39
-// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
-// @link     https://github.com/rx1310
-
+/// * Цвет Cyan
+/// @name color-cyan
+/// @name Colors
+/// @author Google
+/// @link https://material.io/design/color/the-color-system.html
+/// @param {map} $cyan
 $cyan: (
 	50: #e0f7fa,
 	100: #b2ebf2,
@@ -20,16 +21,31 @@ $cyan: (
 	A700: #00b8d4
 );
 
-$cyan--50: #e0f7fa;
-$cyan--100: #b2ebf2;
-$cyan--200: #80deea;
-$cyan--300: #4dd0e1;
-$cyan--400: #26c6da;
-$cyan--500: #00bcd4;
-$cyan--600: #00acc1;
-$cyan--700: #0097a7;
-$cyan--800: #00838f;
-$cyan--900: #006064;
+/// @param {color} $cyan--50
+/// @param {color} $cyan--100
+/// @param {color} $cyan--200
+/// @param {color} $cyan--300
+/// @param {color} $cyan--400
+/// @param {color} $cyan--500
+/// @param {color} $cyan--600
+/// @param {color} $cyan--700
+/// @param {color} $cyan--800
+/// @param {color} $cyan--900
+/// @param {color} $cyan--A100
+/// @param {color} $cyan--A200
+/// @param {color} $cyan--A400
+/// @param {color} $cyan--A700
+
+$cyan--50  : #e0f7fa;
+$cyan--100 : #b2ebf2;
+$cyan--200 : #80deea;
+$cyan--300 : #4dd0e1;
+$cyan--400 : #26c6da;
+$cyan--500 : #00bcd4;
+$cyan--600 : #00acc1;
+$cyan--700 : #0097a7;
+$cyan--800 : #00838f;
+$cyan--900 : #006064;
 $cyan--A100: #84ffff;
 $cyan--A200: #18ffff;
 $cyan--A400: #00e5ff;

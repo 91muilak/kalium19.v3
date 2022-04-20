@@ -1,8 +1,9 @@
-// @license  MIT License
-// @created  2022/04/07 04:04:08
-// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
-// @link     https://github.com/rx1310
-
+/// * Цвет Blue
+/// @name color-blue
+/// @name Colors
+/// @author Google
+/// @link https://material.io/design/color/the-color-system.html
+/// @param {map} $blue
 $blue: (
 	50: #e3f2fd,
 	100: #bbdefb,
@@ -20,16 +21,31 @@ $blue: (
 	A700: #2962ff
 );
 
-$blue--50: #e3f2fd;
-$blue--100: #bbdefb;
-$blue--200: #90caf9;
-$blue--300: #64b5f6;
-$blue--400: #42a5f5;
-$blue--500: #2196f3;
-$blue--600: #1e88e5;
-$blue--700: #1976d2;
-$blue--800: #1565c0;
-$blue--900: #0d47a1;
+/// @param {color} $blue--50
+/// @param {color} $blue--100
+/// @param {color} $blue--200
+/// @param {color} $blue--300
+/// @param {color} $blue--400
+/// @param {color} $blue--500
+/// @param {color} $blue--600
+/// @param {color} $blue--700
+/// @param {color} $blue--800
+/// @param {color} $blue--900
+/// @param {color} $blue--A100
+/// @param {color} $blue--A200
+/// @param {color} $blue--A400
+/// @param {color} $blue--A700
+
+$blue--50  : #e3f2fd;
+$blue--100 : #bbdefb;
+$blue--200 : #90caf9;
+$blue--300 : #64b5f6;
+$blue--400 : #42a5f5;
+$blue--500 : #2196f3;
+$blue--600 : #1e88e5;
+$blue--700 : #1976d2;
+$blue--800 : #1565c0;
+$blue--900 : #0d47a1;
 $blue--A100: #82b1ff;
 $blue--A200: #448aff;
 $blue--A400: #2979ff;
