@@ -1,0 +1,25 @@
+/// * Миксин TextShorten
+/// @name text-shorten
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @arg {int} $numLines [1] количество строк
+@mixin text-shorten($numLines: 1) {
+
+  white-space  : nowrap;
+  text-overflow: ellipsis;
+  overflow     : hidden;
+
+  @supports (-webkit-line-clamp: $numLines) {
+
+    overflow          : hidden;
+    text-overflow     : ellipsis;
+    white-space       : initial;
+    display           : -webkit-box;
+    display           : -moz-box;
+
+    -webkit-line-clamp: $numLines;
+    -webkit-box-orient: vertical;
+
+  }
+
+}
