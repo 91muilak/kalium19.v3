@@ -6,7 +6,7 @@
 ![Количество коммитов в год](https://img.shields.io/github/commit-activity/y/91muilak/kalium19)
 ![Количество ЯП](https://img.shields.io/github/languages/count/91muilak/kalium19?color=fff)
 ![Топ ЯП](https://img.shields.io/github/languages/top/91muilak/kalium19?color=C76494)
-![Версия SASS](https://img.shields.io/github/package-json/dependency-version/91muilak/kalium19/dev/sass/main?label=SASS)
+![Версия SASS](https://img.shields.io/github/package-json/dependency-version/91muilak/kalium19/dev/sass/main?color=CC6699)
 ![Размер репозитория](https://img.shields.io/github/repo-size/91muilak/kalium19?color=ffb600)
 ![Размер кода](https://img.shields.io/github/languages/code-size/91muilak/kalium19)
 [![Количество открытых issue](https://img.shields.io/github/issues-raw/91muilak/kalium19)
