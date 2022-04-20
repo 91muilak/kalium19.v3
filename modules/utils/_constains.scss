@@ -1,0 +1,12 @@
+/// * Функция StrReplace
+/// @name contains
+/// @group Utils
+/// @access public
+/// @author Haba Kudzaev
+/// @link https://github.com/rx1310
+/// @arg {string} $list
+/// @arg {string} $var
+/// @return {boolean} true | false
+@function contains($list, $var) {
+	@return (null != index($list, $var));
+}
