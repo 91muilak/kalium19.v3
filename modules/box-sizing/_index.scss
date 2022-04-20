@@ -1,0 +1,23 @@
+/// * Импорт модулей
+@use '../prefixer' as *;
+
+/// * Переменные
+/// @access public
+/// @param {list} $prefixes_box-sizing список префиксов для свойства
+$prefixes_box-sizing: webkit moz o !default;
+
+/// * Миксин BoxSizing
+/// @name box-sizing
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} prefixer
+/// @arg $model
+@mixin box-sizing($model: border-box) {
+
+	@include prefixer(
+		box-sizing,
+		$model,
+		$prefixes_box-sizing
+	);
+
+}

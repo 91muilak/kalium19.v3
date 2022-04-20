@@ -1,0 +1,58 @@
+/// @group BEM
+/// @access private
+/// @author Marcmintel
+/// @link https://medium.com/@marcmintel
+/// @arg $selector
+/// @arg $modifier
+@function containsModifier($selector, $modifier) {
+
+	/// @require selectorToString
+	/// @access private
+	/// @param $selector
+	/// @arg $selector ―――――――――――――•
+	$selector: selectorToString($selector);
+
+	/// @return {boolean} true | false
+	@if str-index($selector, $modifier) {
+		@return true;
+	} @else {
+		@return false;
+	}
+
+}
+
+/// @group BEM
+/// @access private
+/// @author Marcmintel
+/// @link https://medium.com/@marcmintel
+/// @arg $selector
+/// @return {string} $selector
+@function selectorToString($selector) {
+
+	/// @access private
+	/// @param $selector
+	$selector: inspect($selector);          // cast to string
+	$selector: str-slice($selector, 2, -2); // remove brackets
+
+	@return $selector;
+
+}
+
+/// @group BEM
+/// @access private
+/// @author Marcmintel
+/// @link https://medium.com/@marcmintel
+/// @arg $selector
+/// @arg $modifier
+/// @return {string} str-slice
+@function getBlock($selector, $modifier) {
+
+	/// @access private
+	/// @param $selector
+	/// @param $modifierStart
+	$selector     : selectorToString($selector);
+	$modifierStart: str-index($selector, $modifier) - 1;
+
+	@return str-slice($selector, 0, $modifierStart);
+
+}

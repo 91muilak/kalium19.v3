@@ -1,0 +1,21 @@
+/// * Импорт модулей
+@use '../prefixer' as *;
+
+/// * Переменные
+/// @access public
+/// @param {list} $prefixes_box-shadow список префиксов для свойства
+$prefixes_box-shadow: webkit moz !default;
+
+/// * Миксин BoxShadow
+/// @name box-shadow
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} prefixer
+/// @arg {...} $params список значений
+@mixin box-shadow($params...) {
+	@include prefixer(
+		box-shadow,
+		$params,
+		$prefixes_box-shadow
+	);
+}

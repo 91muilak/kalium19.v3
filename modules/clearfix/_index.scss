@@ -1,0 +1,11 @@
+/// * Миксин Clearfix
+/// @name clearfix
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+@mixin clearfix {
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}

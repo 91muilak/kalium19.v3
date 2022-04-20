@@ -1,0 +1,52 @@
+/// * Переменные
+/// @access public
+/// @param {boolean} $keyframes-webkit [true] формирование Keyframes с префиксом для WebKit
+/// @param {boolean} $keyframes-moz [true] формирование Keyframes с префиксом для Mozilla
+/// @param {boolean} $keyframes-ms [true] формирование Keyframes с префиксом для MS
+/// @param {boolean} $keyframes-o [true] формирование Keyframes с префиксом для Opera
+$keyframes-webkit: true !default;
+$keyframes-moz   : true !default;
+$keyframes-ms    : true !default;
+$keyframes-o     : true !default;
+
+/// * Миксин Keyframes
+/// @name keyframes
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @arg $name название фрейма
+@mixin keyframes($name) {
+
+	/// ? Префикс для WebKit
+	@if $keyframes-webkit == true {
+		@-webkit-keyframes #{$name} {
+			@content
+		}
+	};
+
+	/// ? Префикс для Mozilla Firefox
+	@if $keyframes-moz == true {
+		@-moz-keyframes #{$name} {
+			@content
+		}
+	};
+
+	/// ? Префикс для IE
+	@if $keyframes-ms == true {
+		@-ms-keyframes #{$name} {
+			@content
+		}
+	};
+
+	/// ? Префикс для Opera
+	@if $keyframes-o == true {
+		@-o-keyframes #{$name} {
+			@content
+		}
+	};
+
+	/// ? Без префикса
+	@keyframes #{$name} {
+		@content
+	}
+
+}

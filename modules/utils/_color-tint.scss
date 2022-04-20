@@ -1,0 +1,16 @@
+/// * Функция ColorTint
+/// @name color-tint
+/// @group Utils
+/// @access public
+/// @author Kitty Giraudel
+/// @link https://github.com/KittyGiraudel
+/// @return {color}
+/// @arg {color} $color color to tint
+/// @arg {number} $percentage percentage of `$color` in returned color
+@function color-tint($color, $percentage) {
+	@return mix(
+		white,
+		$color,
+		$percentage
+	);
+}

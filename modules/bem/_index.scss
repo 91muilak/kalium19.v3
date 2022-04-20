@@ -1,0 +1,72 @@
+/// * Импорт модулей
+@use 'functions' as *;
+
+/// * Переменные
+/// @access public
+/// @param $bem-element разделитель элемента
+/// @param $bem-modifier разделитель мофификатора
+$bem-element: '__' !default;
+$bem-modifier: '--' !default;
+
+/// * Миксин B
+/// @group BEM
+/// @author Marcmintel
+/// @link https://medium.com/@marcmintel
+/// @arg $block
+@mixin b($block) {
+	.#{$block} {
+		@content;
+	}
+}
+
+/// * Миксин E
+/// @group BEM
+/// @author Marcmintel
+/// @link https://medium.com/@marcmintel
+/// @arg $element
+@mixin e($element) {
+
+	/// @param $selector
+	/// @access private переменная доступна внутри миксина
+	$selector: &;
+
+	/// @require {function} containsModifier from _functions.scss
+	@if containsModifier($selector, $bem-modifier) {
+
+		/// @param $block
+		/// @access private переменная доступна внутри условия миксина
+		/// @require {function} getBlock from _functions.scss
+		$block: getBlock($selector, $bem-modifier);
+
+		@at-root {
+			#{$selector} {
+				#{$block + $bem-element + $element} {
+					@content;
+				}
+			}
+		}
+
+	} @else {
+
+		@at-root {
+			#{$selector + $bem-element + $element } {
+				@content;
+			}
+		}
+
+	}
+
+}
+
+/// * Миксин M
+/// @group BEM
+/// @author Marcmintel
+/// @link https://medium.com/@marcmintel
+/// @arg $modifier название модификатора
+@mixin m($modifier) {
+	@at-root {
+		#{&}#{ $bem-modifier + $modifier } {
+			@content;
+		}
+	}
+}

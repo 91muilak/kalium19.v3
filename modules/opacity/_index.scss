@@ -1,0 +1,40 @@
+/// * Импорт модулей
+@use '../prefixer' as *;
+
+/// * Переменные
+/// @access public
+/// @param {boolean} $opacity-ie5 [true]
+/// @param {boolean} $opacity-ie8 [true]
+/// @param {list} $prefixes_opacity
+$opacity-ie5: true !default;
+$opacity-ie8: true !default;
+$prefixes_opacity: moz khtml !default;
+
+/// * Миксин Opacity
+/// @name opacity
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} prefixer
+/// @arg $val значение свойства opacity
+/// @arg $val-ie значение свойства opacity для IE
+@mixin opacity($val) {
+
+	$val-ie: $val * 100;
+
+	@include prefixer(
+		opacity,
+		$val,
+		$prefixes_opacity
+	);
+
+	@if $opacity-ie5 == true {
+		/* for IE 5-7 */
+		filter: alpha(opacity=$val-ie);
+	}
+
+	@if $opacity-ie8 == true {
+		/* for IE 8 */
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$val-ie})";
+	}
+
+}
