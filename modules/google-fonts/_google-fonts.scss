@@ -40,7 +40,7 @@ $google-font-subsets: (
 /// @arg {list} $style [normal] font style normal/italic/oblique / list or string (normal and or italic)
 @mixin google-font($name: null, $weights: 400, $styles: normal, $text: null) {
 
-	@warn '🔶 Миксин "google-fonts" не поддерживается разработчиком Kalium19!' + 'dfjh';
+	@warn '🔶 Миксин "google-fonts" не поддерживается разработчиком Kalium19!';
 
 	/// @param {url} $URL base url
 	$URL: '//fonts.googleapis.com/css?family=';
