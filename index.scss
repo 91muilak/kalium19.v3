@@ -9,6 +9,7 @@
 @forward 'modules/box-sizing';
 @forward 'modules/centering';
 @forward 'modules/clearfix';
+@forward 'modules/font-face';
 @forward 'modules/hide-text';
 @forward 'modules/keyframes';
 @forward 'modules/opacity';
@@ -24,6 +25,7 @@
 
 @forward 'modules/utils/color-shade';
 @forward 'modules/utils/color-tint';
+@forward 'modules/utils/constains';
 @forward 'modules/utils/deep-get';
 @forward 'modules/utils/deep-set';
 @forward 'modules/utils/str-replace';
