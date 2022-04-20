@@ -11,22 +11,22 @@
 /// * Переменные
 /// @access public
 $google-font-subsets: (
-  'arabic'      : false,
+	'arabic'      : false,
 	'bengali'     : false,
 	'cyrillic'    : false,
 	'cyrillic-ext': false,
 	'devanagari'  : false,
-  'greek'       : false,
-  'greek-ext'   : false,
-  'gujarati'    : false,
-  'hebrew'      : false,
-  'khmer'       : false,
-  'latin'       : false,
-  'latin-ext'   : false,
-  'tamil'       : false,
-  'telugu'      : false,
-  'thai'        : false,
-  'vietnamese'  : false
+	'greek'       : false,
+	'greek-ext'   : false,
+	'gujarati'    : false,
+	'hebrew'      : false,
+	'khmer'       : false,
+	'latin'       : false,
+	'latin-ext'   : false,
+	'tamil'       : false,
+	'telugu'      : false,
+	'thai'        : false,
+	'vietnamese'  : false
 ) !default;
 
 /// * Миксин GoogleFont v2
@@ -143,39 +143,39 @@ $google-font-subsets: (
 
 @function __gf__list-unique($list) {
 
-  $result: ();
+	$result: ();
 
-  @each $item in $list {
+	@each $item in $list {
 		@if not index($result, $item + '') {
 			$result: append($result, $item + '');
 		}
 	}
 
-  @each $item in $result {
+	@each $item in $result {
 		$result: set-nth($result, index($result, $item), unquote($item));
 	}
 
-  @return $result;
+	@return $result;
 
 }
 
 @function __gf__str-replace($string, $search, $replace: '') {
 
-  $index: str-index($string, $search);
+	$index: str-index($string, $search);
 
-  @return if($index, str-slice($string, 1, $index - 1) + $replace + __gf__str-replace(str-slice($string, $index + str-length($search)), $search, $replace), $string);
+	@return if($index, str-slice($string, 1, $index - 1) + $replace + __gf__str-replace(str-slice($string, $index + str-length($search)), $search, $replace), $string);
 
 }
 
 @function __gf__str-explode($string) {
 
-  $list:();
+	$list:();
 
-  @for $i from 1 through str-length($string) {
+	@for $i from 1 through str-length($string) {
 		$list: append($list, str-slice($string, $i, $i));
 	}
 
-  @return $list;
+	@return $list;
 
 }
 

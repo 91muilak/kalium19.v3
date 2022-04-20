@@ -21,7 +21,7 @@ $formats_font-face: 'eot?#iefix' eot woff woff2 ttf otf svg !default;
 		font: {
 			family: quote($font-name);
 			weight: $weight;
-    	style: $style;
+			style: $style;
 		}
 
 		@if (contains($formats, eot)) {
