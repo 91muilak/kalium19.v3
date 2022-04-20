@@ -1,0 +1,22 @@
+/// * Миксин AtRoot
+/// @name at-root
+/// @access private
+/// @author cimmanon
+/// @link https://stackoverflow.com/users/1652962/cimmanon
+/// @arg $selector
+@mixin at-root($selector) {
+  @at-root #{if(not &, $selector, selector-append(&, $selector))} {
+    @content;
+  }
+}
+
+/// * Миксин Placeholder
+/// @name placeholder
+/// @author cimmanon
+/// @link https://stackoverflow.com/users/1652962/cimmanon
+@mixin placeholder {
+  @include at-root('::-webkit-input-placeholder') { @content; }
+  @include at-root(':-moz-placeholder')           { @content; }
+  @include at-root('::-moz-placeholder')          { @content; }
+  @include at-root(':-ms-input-placeholder')      { @content; }
+}
