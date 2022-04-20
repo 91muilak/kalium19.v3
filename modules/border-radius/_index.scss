@@ -1,0 +1,143 @@
+/// * Импорт модулей
+@use '../prefixer' as *;
+
+/// * Переменные
+/// @access public
+/// @param {radius} $border-radius радиус скругления по умолчанию
+/// @param {list} $prefixes_border-radius список префиксов для свойства
+$border-radius: null !default;
+$prefixes_border-radius: webkit moz !default;
+
+/// * Миксин BorderRadius
+/// @name border-radius
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} prefixer
+/// @arg $radius
+@mixin border-radius($radius: $border-radius) {
+
+	@include prefixer(
+		border-radius,
+		$radius,
+		$prefixes_border-radius
+	);
+
+}
+
+/// * Миксин BorderRadiusExtended
+/// @name border-corner-radius
+/// @group BorderRadius
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} prefixer
+/// @arg $vr - скругления сверху и снизу
+/// @arg $hr - скругления по бокам
+/// @arg $radius - радиус скругления
+@mixin border-corner-radius($vr, $hr, $radius: $border-radius) {
+
+	@include prefixer(
+		border-#{$vr}-#{$hr}-radius,
+		$radius,
+		webkit
+	);
+
+	/// отдельно для браузеров Mozilla FF
+	-moz-border-radius-#{$vr}#{$hr}: $radius;
+
+}
+
+/// * Миксин BorderRadius Top Left
+/// @name border-top-left-radius
+/// @group BorderRadius
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} border-corner-radius
+/// @arg $radius
+@mixin border-top-left-radius($radius: $border-radius) {
+	@include border-corner-radius(top, left, $radius);
+}
+
+/// * Миксин BorderRadius Top Right
+/// @name border-top-right-radius
+/// @group BorderRadius
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} border-corner-radius
+/// @arg $radius
+@mixin border-top-right-radius($radius: $border-radius) {
+	@include border-corner-radius(top, right, $radius);
+}
+
+/// * Миксин BorderRadius Bottom Left
+/// @name border-bottom-left-radius
+/// @group BorderRadius
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} border-corner-radius
+/// @arg $radius
+@mixin border-bottom-left-radius($radius: $border-radius) {
+	@include border-corner-radius(bottom, left, $radius);
+}
+
+/// * Миксин BorderRadius Bottom Right
+/// @name border-bottom-right-radius
+/// @group BorderRadius
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} border-corner-radius
+/// @arg $radius
+@mixin border-bottom-right-radius($radius: $border-radius) {
+	@include border-corner-radius(bottom, right, $radius);
+}
+
+/// * Миксин BorderRadius Top
+/// @name border-top-radius
+/// @group BorderRadius
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} border-top-left-radius
+/// @require {mixin} border-top-right-radius
+/// @arg $radius
+@mixin border-top-radius($radius: $border-radius) {
+	@include border-top-left-radius($radius);
+	@include border-top-right-radius($radius);
+}
+
+/// * Миксин BorderRadius Bottom
+/// @name border-bottom-radius
+/// @group BorderRadius
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} border-bottom-left-radius
+/// @require {mixin} border-bottom-right-radius
+/// @arg $radius
+@mixin border-bottom-radius($radius: $border-radius) {
+	@include border-bottom-left-radius($radius);
+	@include border-bottom-right-radius($radius);
+}
+
+/// * Миксин BorderRadius Right
+/// @name border-right-radius
+/// @group BorderRadius
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} border-top-right-radius
+/// @require {mixin} border-bottom-right-radius
+/// @arg $radius
+@mixin border-right-radius($radius: $border-radius) {
+	@include border-top-right-radius($radius);
+	@include border-bottom-right-radius($radius);
+}
+
+/// * Миксин BorderRadius Left
+/// @name border-left-radius
+/// @group BorderRadius
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} border-top-right-radius
+/// @require {mixin} border-bottom-left-radius
+/// @arg $radius
+@mixin border-left-radius($radius: $border-radius) {
+	@include border-top-left-radius($radius);
+	@include border-bottom-left-radius($radius);
+}

@@ -1,0 +1,24 @@
+/// * Импорт модулей
+@use '../prefixer' as *;
+
+/// * Переменные
+/// @access public
+/// @param {list} $prefixes_flex-flow список префиксов для свойства
+$prefixes_flex-flow: webkit ms !default;
+
+/// * Миксин Flex Flow
+/// @name flex-flow
+/// @group Flex
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} prefixer
+/// @arg $vals значение свойства flex-flow
+@mixin flex-flow($vals: (row nowrap)) {
+
+	@include prefixer(
+		flex-flow,
+		$vals,
+		$prefixes_flex-flow
+	);
+
+}

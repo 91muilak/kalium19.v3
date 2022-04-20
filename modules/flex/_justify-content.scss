@@ -1,0 +1,74 @@
+/// * Импорт модулей
+@use '../prefixer' as *;
+
+/// * Переменные
+/// @access public
+/// @param {list} $prefixes_box-pack список префиксов для свойства
+/// @param {list} $prefixes_justify-content список префиксов для свойства
+$prefixes_box-pack: webkit moz !default;
+$prefixes_justify-content: webkit !default;
+
+/// * Миксин Justify Content
+/// @name justify-content
+/// @group Flex
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} prefixer
+/// @arg $val [flex-start] значение свойства `justify-content`
+@mixin justify-content($val: flex-start) {
+
+	@if $val == flex-start {
+
+		@include prefixer(
+			box-pack,
+			start,
+			$prefixes_box-pack,
+			false
+		);
+
+		-ms-flex-pack: start;
+
+	} @else if $val == flex-end {
+
+		@include prefixer(
+			box-pack,
+			end,
+			$prefixes_box-pack,
+			false
+		);
+
+		-ms-flex-pack: end;
+
+	} @else if $val == space-between {
+
+		@include prefixer(
+			box-pack,
+			justify,
+			$prefixes_box-pack,
+			false
+		);
+
+		-ms-flex-pack: justify;
+
+	} @else if $val == space-around {
+		-ms-flex-pack: distribute;
+	} @else {
+
+		@include prefixer(
+			box-pack,
+			$val,
+			$prefixes_box-pack,
+			false
+		);
+
+		-ms-flex-pack: $val;
+
+	}
+
+	@include prefixer(
+		justify-content,
+		$val,
+		$prefixes_justify-content
+	);
+
+}

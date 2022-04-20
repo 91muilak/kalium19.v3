@@ -1,0 +1,87 @@
+/// * Импорт модулей
+@use 'legacy' as *;
+
+/// * Миксин Prefixer
+/// @name prefixer
+/// @group Prefixer
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} prefixer-legacy
+/// @arg $prop CSS-свойство
+/// @arg $val значение CSS-свойства
+/// @arg {list} $prefixes список префиксов (без запятых)
+/// @arg {boolean} $defDec boolean-переменная, которая позволяет убрать свойство без префикса
+@mixin prefixer($prop, $val, $prefixes: (), $defDec: true) {
+
+	@if $prefixes == all {
+
+		/// Если параметром $prefixes указано значение
+		/// `all`, то будет применён миксин prefixer-legacy.
+		@include prefixer-legacy(
+			$prop,
+			$val
+		);
+
+	} @else {
+
+		/// Проходим по списку $prefixes и добавляем
+		/// префиксы по очереди.
+		@each $prefix in $prefixes {
+			/* #{$prop} for "#{$prefix}" */
+			#{'-' + $prefix + '-' + $prop}: $val;
+		}
+
+		/// Если передать параметру $defDec значение true,
+		/// то будет добавлена строка без префикса.
+		@if $defDec == true {
+			/* non prefixed "#{$prop}" */
+			#{$prop}: $val;
+		}
+
+	}
+
+}
+
+/// * Миксин Prefixer Pack
+/// @name prefixer-pack
+/// @group Prefixer
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} prefixer-legacy
+/// @param $decs список CSS-свойств
+/// @param {list} $prefixes список префиксов (без запятых)
+/// @param {boolean} $defDec boolean-переменная, которая позволяет убрать свойство без префикса
+@mixin prefixer-pack($decs, $prefixes: (), $defDec: true) {
+
+	@each $prop, $val in $decs {
+
+		@if $prefixes == all {
+
+			/// Если параметром $prefixes указано значение
+			/// "all", то будет применён миксин prefixer-legacy.
+			@include prefixer-legacy(
+				$prop,
+				$val
+			);
+
+		} @else {
+
+			/// Проходим по списку $prefixes и добавляем
+			/// префиксы по очереди.
+			@each $prefix in $prefixes {
+				/* #{$prop} for "#{$prefix}" */
+				#{'-' + $prefix + '-' + $prop}: $val;
+			}
+
+			/// Если передать параметру $defDec значение true,
+			/// то будет добавлена строка без префикса.
+			@if $defDec == true {
+				/* non prefixed "#{$prop}" */
+				#{$prop}: $val;
+			}
+
+		}
+
+	}
+
+}

@@ -1,0 +1,26 @@
+/// * Импорт модулей
+@use '../prefixer' as *;
+
+/// * Переменные
+/// @access public
+/// @param {list} $prefixes_flex-shrink список префиксов для свойства
+$prefixes_flex-shrink: webkit moz !default;
+
+/// * Миксин Flex Shrink
+/// @name flex-shrink
+/// @group Flex
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} prefixer
+/// @param {int} $int [0] значение свойства `flex-shrink`
+@mixin flex-shrink($int: 0) {
+
+	@include prefixer(
+		flex-shrink,
+		$int,
+		$prefixes_flex-shrink
+	);
+
+	-ms-flex: $int;
+
+}

@@ -1,0 +1,51 @@
+/// * Миксин Position
+/// @name position
+/// @group Position
+/// @author Kitty Giraudel
+/// @link https://github.com/KittyGiraudel
+/// @arg {string} $position either `relative`, `absolute` or `fixed`
+/// @arg {length} $top [null] top offset
+/// @arg {length} $right [null] right offset
+/// @arg {length} $bottom [null] bottom offset
+/// @arg {length} $left [null] left offset
+/// Shorthand mixin for offset positioning
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+	position: $position;
+	top     : $top;
+	right   : $right;
+	bottom  : $bottom;
+	left    : $left;
+}
+
+/// * Миксин Position Absolute
+/// @name position-absolute
+/// @group Position
+/// @author Kitty Giraudel
+/// @link https://github.com/KittyGiraudel
+/// @arg {arglist} $args offsets
+/// @require {mixin} position
+@mixin position-absolute($args...) {
+	@include position(absolute, $args...);
+}
+
+/// * Миксин Position Relative
+/// @name position-relative
+/// @group Position
+/// @author Kitty Giraudel
+/// @link https://github.com/KittyGiraudel
+/// @arg {arglist} $args offsets
+/// @require {mixin} position
+@mixin relative($args...) {
+	@include position(relative, $args...);
+}
+
+/// * Миксин Position Fixed
+/// @name position-fixed
+/// @group Position
+/// @author Kitty Giraudel
+/// @link https://github.com/KittyGiraudel
+/// @arg {arglist} $args offsets
+/// @require {mixin} position
+@mixin fixed($args...) {
+	@include position(fixed, $args...);
+}

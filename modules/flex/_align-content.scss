@@ -1,0 +1,22 @@
+/// * Миксин Align Content
+/// @name align-content
+/// @group Flex
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @arg $val значение свойства `align-content`
+@mixin align-content($val: stretch) {
+
+	// No Webkit Box Fallback.
+	-webkit-align-content: $val;
+
+	@if $val == flex-start {
+		-ms-flex-line-pack: start;
+	} @else if $val == flex-end {
+		-ms-flex-line-pack: end;
+	} @else {
+		-ms-flex-line-pack: $val;
+	}
+
+	align-content: $val;
+
+}

@@ -1,0 +1,73 @@
+/// * Импорт модулей
+@use '../prefixer' as *;
+
+/// * Переменные
+/// @access public
+/// @param {list} $prefixes_flex-direction список префиксов для свойства
+/// @param {list} $prefixes_box-direction список префиксов для свойства
+$prefixes_flex-direction: webkit ms !default;
+$prefixes_box-direction: webkit moz !default;
+
+/// * Миксин Flex Direction
+/// @name flex-direction
+/// @group Flex
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} prefixer
+/// @require {mixin} prefixer-pack
+/// @arg $direction [row] значение свойства `box-direction`
+@mixin flex-direction($direction: row) {
+
+	@if $direction == row-reverse {
+
+		@include prefixer-pack(
+			(
+				box-direction: reverse,
+				box-orient: horizontal
+			),
+			$prefixes_box-direction,
+			false
+		);
+
+	} @else if $direction == column {
+
+		@include prefixer-pack(
+			(
+				box-direction: normal,
+				box-orient: vertical
+			),
+			$prefixes_box-direction,
+			false
+		);
+
+	} @else if $direction == column-reverse {
+
+		@include prefixer-pack(
+			(
+				box-direction: reverse,
+				box-orient: vertical
+			),
+			$prefixes_box-direction,
+			false
+		);
+
+	} @else {
+
+		@include prefixer-pack(
+			(
+				box-direction: normal,
+				box-orient: horizontal
+			),
+			$prefixes_box-direction,
+			false
+		);
+
+	}
+
+	@include prefixer(
+		flex-direction,
+		$direction,
+		$prefixes_flex-direction
+	);
+
+}

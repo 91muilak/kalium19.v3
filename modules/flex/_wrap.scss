@@ -1,0 +1,23 @@
+/// * Импорт модулей
+@use '../prefixer' as *;
+
+/// * Миксин Flex Wrap
+/// @name flex-wrap
+/// @group Flex
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @arg $vals [nowrap] значение свойства `flex-wrap`
+@mixin flex-wrap($val: nowrap) {
+
+	/* No Webkit/FF Box fallback. */
+	-webkit-flex-wrap: $val;
+
+	@if $val == nowrap {
+		-ms-flex-wrap: none;
+	} @else {
+		-ms-flex-wrap: $val;
+	}
+
+	flex-wrap: $val;
+
+}

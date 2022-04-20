@@ -1,0 +1,26 @@
+/// * Переменные
+/// @param {list} $prefixes_legacy список префиксов
+$prefixes_legacy: (
+	webkit,
+	khtml,
+	moz,
+	ms,
+	o
+) !default;
+
+/// * Миксин Prefixer Legacy
+/// @name prefixer-legacy
+/// @group Prefixer
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @arg $prop CSS-свойство
+/// @arg $val значение CSS-свойства
+@mixin prefixer-legacy($prop, $val) {
+
+	/// Проходим по списку `$prefixes` и добавляем
+	/// префиксы по очереди.
+	@each $prefix in $prefixes_legacy {
+		-#{$prefix}-#{$prop}: #{$val};
+	}
+
+}

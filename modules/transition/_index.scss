@@ -1,0 +1,21 @@
+/// * Импорт модулей
+@use '../prefixer' as *;
+
+/// * Переменные
+/// @access public
+/// @param {list} $prefixes_transition список префиксов для свойства
+$prefixes_transition: o moz webkit !default;
+
+/// * Миксин Transition
+/// @name transition
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} prefixer
+/// @arg {...} $params список значений
+@mixin transition($params...) {
+	@include prefixer(
+		transition,
+		$params,
+		$prefixes_transition
+	);
+}

@@ -1,0 +1,21 @@
+/// * Импорт модулей
+@use '../prefixer' as *;
+
+/// * Переменные
+/// @access public
+/// @param {list} $prefixes_tab-size список префиксов для свойства
+$prefixes_tab-size: o moz !default;
+
+/// * Миксин TabSize
+/// @name tab-size
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} prefixer
+/// @arg $size значение свойства tab-size
+@mixin tab-size($size) {
+	@include prefixer(
+		tab-size,
+		$size,
+		$prefixes_tab-size
+	);
+}

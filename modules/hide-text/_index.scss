@@ -1,0 +1,10 @@
+/// * Миксин HideText
+/// @name hide-text
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+@mixin hide-text() {
+	overflow: hidden;
+	padding: 0;
+	text-indent: 101%;
+	white-space: nowrap;
+}

@@ -1,0 +1,26 @@
+/// * Переменные
+/// @access public
+/// @param {list} $prefixes_box-align список префиксов для свойства
+
+/// * Миксин Align Self
+/// @name align-self
+/// @group Flex
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @arg $val [auto] значение свойства align-self
+@mixin align-self($val: auto) {
+
+	// No Webkit Box Fallback.
+	-webkit-align-self: $val;
+
+	@if $val == flex-start {
+		-ms-flex-item-align: start;
+	} @else if $val == flex-end {
+		-ms-flex-item-align: end;
+	} @else {
+		-ms-flex-item-align: $val;
+	}
+
+	align-self: $val;
+
+}

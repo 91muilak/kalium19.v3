@@ -1,0 +1,24 @@
+/// * Импорт модулей
+@use '../prefixer' as *;
+
+/// * Переменные
+/// @access public
+/// @param {list} $prefixes_flex-basis список префиксов для свойства
+$prefixes_flex-basis: webkit !default;
+
+/// * Миксин Flex Basis
+/// @name flex-basis
+/// @group Flex
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} prefixer
+/// @arg $val [auto] значение свойства flex-basis
+@mixin flex-basis($val: auto) {
+
+	@include prefixer(
+		flex-basis,
+		$val,
+		$prefixes_flex-basis
+	);
+
+}
