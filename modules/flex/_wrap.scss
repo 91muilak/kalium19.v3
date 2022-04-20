@@ -1,13 +1,12 @@
-// @license  MIT License
-// @created  2022/04/07 05:11:04
-// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
-// @link     https://github.com/rx1310
-
-// * Импорт модулей
+/// * Импорт модулей
 @use '../prefixer' as *;
 
-// * Миксин
-/// @param $vals значение свойства flex-wrap
+/// * Миксин Flex Wrap
+/// @name flex-wrap
+/// @group Flex
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @arg $vals [nowrap] значение свойства `flex-wrap`
 @mixin flex-wrap($val: nowrap) {
 
 	/* No Webkit/FF Box fallback. */
