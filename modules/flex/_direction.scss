@@ -1,17 +1,21 @@
-// @license  MIT License
-// @created  2022/04/07 04:57:55
-// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
-// @link     https://github.com/rx1310
-
-// * Импорт модулей
+/// * Импорт модулей
 @use '../prefixer' as *;
 
-// * Переменные
+/// * Переменные
+/// @access public
+/// @param {list} $prefixes_flex-direction список префиксов для свойства
+/// @param {list} $prefixes_box-direction список префиксов для свойства
 $prefixes_flex-direction: webkit ms !default;
 $prefixes_box-direction: webkit moz !default;
 
-// * Миксин
-/// @param $direction значение свойства box-direction
+/// * Миксин Flex Direction
+/// @name flex-direction
+/// @group Flex
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} prefixer
+/// @require {mixin} prefixer-pack
+/// @arg $direction [row] значение свойства `box-direction`
 @mixin flex-direction($direction: row) {
 
 	@if $direction == row-reverse {

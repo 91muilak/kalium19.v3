@@ -1,10 +1,9 @@
-// @license  MIT License
-// @created  2022/04/07 04:46:17
-// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
-// @link     https://github.com/rx1310
-
-// * Миксин
-/// @param $val значение свойства align-content
+/// * Миксин Align Content
+/// @name align-content
+/// @group Flex
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @arg $val значение свойства `align-content`
 @mixin align-content($val: stretch) {
 
 	// No Webkit Box Fallback.

@@ -1,17 +1,20 @@
-// @license  MIT License
-// @created  2022/04/07 05:08:09
-// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
-// @link     https://github.com/rx1310
-
-// * Импорт модулей
+/// * Импорт модулей
 @use '../prefixer' as *;
 
-// * Переменные
+/// * Переменные
+/// @access public
+/// @param {list} $prefixes_box-ordinal-group список префиксов для свойства
+/// @param {list} $prefixes_order список префиксов для свойства
 $prefixes_box-ordinal-group: webkit moz !default;
 $prefixes_order: webkit !default;
 
-// * Миксин
-/// @param $int значение свойства order
+/// * Миксин Order
+/// @name order
+/// @group Flex
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} prefixer
+/// @param {int} $int [0] значение свойства `order`
 @mixin order($int: 0) {
 
 	@include prefixer(

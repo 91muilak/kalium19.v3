@@ -1,17 +1,20 @@
-// @license  MIT License
-// @created  2022/04/07 05:05:36
-// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
-// @link     https://github.com/rx1310
-
-// * Импорт модулей
+/// * Импорт модулей
 @use '../prefixer' as *;
 
-// * Переменные
+/// * Переменные
+/// @access public
+/// @param {list} $prefixes_box-pack список префиксов для свойства
+/// @param {list} $prefixes_justify-content список префиксов для свойства
 $prefixes_box-pack: webkit moz !default;
 $prefixes_justify-content: webkit !default;
 
-// * Миксин
-/// @param $val значение свойства justify-content
+/// * Миксин Justify Content
+/// @name justify-content
+/// @group Flex
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} prefixer
+/// @arg $val [flex-start] значение свойства `justify-content`
 @mixin justify-content($val: flex-start) {
 
 	@if $val == flex-start {

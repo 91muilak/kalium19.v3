@@ -1,16 +1,18 @@
-// @license  MIT License
-// @created  2022/04/07 05:00:30
-// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
-// @link     https://github.com/rx1310
-
-// * Импорт модулей
+/// * Импорт модулей
 @use '../prefixer' as *;
 
-// * Переменные
+/// * Переменные
+/// @access public
+/// @param {list} $prefixes_flex-flow список префиксов для свойства
 $prefixes_flex-flow: webkit ms !default;
 
-// * Миксин
-/// @param $vals значение свойства flex-flow
+/// * Миксин Flex Flow
+/// @name flex-flow
+/// @group Flex
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} prefixer
+/// @arg $vals значение свойства flex-flow
 @mixin flex-flow($vals: (row nowrap)) {
 
 	@include prefixer(

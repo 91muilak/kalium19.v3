@@ -1,10 +1,13 @@
-// @license  MIT License
-// @created  2022/04/07 04:54:30
-// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
-// @link     https://github.com/rx1310
+/// * Переменные
+/// @access public
+/// @param {list} $prefixes_box-align список префиксов для свойства
 
-// * Миксин
-/// @param $val значение свойства align-self
+/// * Миксин Align Self
+/// @name align-self
+/// @group Flex
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @arg $val [auto] значение свойства align-self
 @mixin align-self($val: auto) {
 
 	// No Webkit Box Fallback.

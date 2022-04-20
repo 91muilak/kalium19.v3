@@ -1,17 +1,20 @@
-// @license  MIT License
-// @created  2022/04/07 04:51:08
-// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
-// @link     https://github.com/rx1310
-
-// * Импорт модулей
+/// * Импорт модулей
 @use '../prefixer' as *;
 
-// * Переменные
+/// * Переменные
+/// @access public
+/// @param {list} $prefixes_box-align список префиксов для свойства
+/// @param {list} $prefixes_align-items список префиксов для свойства
 $prefixes_box-align  : webkit moz !default;
 $prefixes_align-items: webkit !default;
 
-// * Миксин
-/// @param $val значение свойства align-items
+/// * Миксин Align Items
+/// @name align-items
+/// @group Flex
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} prefixer
+/// @param $val [stretch] значение свойства align-items
 @mixin align-items($val: stretch) {
 
 	@if $val == flex-start {

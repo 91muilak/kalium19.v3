@@ -1,17 +1,20 @@
-// @license  MIT License
-// @created  2022/04/07 05:04:39
-// @author   Haba Kudzaev (rx1310) <rx1310@inbox.ru>
-// @link     https://github.com/rx1310
-
-// * Импорт модулей
+/// * Импорт модулей
 @use '../prefixer' as *;
 
-// * Переменные
+/// * Переменные
+/// @access public
+/// @param {list} $prefixes_box-flex список префиксов для свойства
+/// @param {list} $prefixes_flex-grow список префиксов для свойства
 $prefixes_box-flex : webkit moz !default;
 $prefixes_flex-grow: webkit !default;
 
-// * Миксин
-/// @param $int значение свойства flex-grow
+/// * Миксин Flex Grow
+/// @name flex-grow
+/// @group Flex
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} prefixer
+/// @arg {int} $int значение свойства `flex-grow`
 @mixin flex-grow($int: 1) {
 
 	@include prefixer(
