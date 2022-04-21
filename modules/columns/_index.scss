@@ -1,0 +1,31 @@
+/// * Импорт модулей
+@use '../prefixer' as *;
+
+/// * Переменные
+/// @access public
+/// @param {list} $prefixes_column-count список префиксов для свойства
+/// @param {list}$prefixes_column-gap список префиксов для свойства
+$prefixes_column-count: moz webkit !default;
+$prefixes_column-gap: moz webkit !default;
+
+/// * Миксин Columns
+/// @name columns
+/// @author Matt Delac
+/// @link https://github.com/matthieua
+/// @arg {int} $count [3] count
+/// @arg {int} $gap [10] gap
+@mixin columns($count: 3, $gap: 10) {
+
+  @include prefixer(
+		column-count,
+		$count,
+		$prefixes_column-count
+	);
+
+  @include prefixer(
+		column-gap,
+		$gap,
+		$prefixes_column-gap
+	);
+
+}
