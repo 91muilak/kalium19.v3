@@ -2,9 +2,9 @@
 
 @forward 'modules/animation';
 @forward 'modules/antialias';
-@forward 'modules/background-gradient';
-@forward 'modules/background-opacity';
-@forward 'modules/background-size';
+@forward 'modules/background/gradient';
+@forward 'modules/background/opacity';
+@forward 'modules/background/size';
 @forward 'modules/bem';
 @forward 'modules/border-radius';
 @forward 'modules/box-shadow';
@@ -20,6 +20,7 @@
 @forward 'modules/hide-text';
 @forward 'modules/image-2x';
 @forward 'modules/keyframes';
+@forward 'modules/mquery';
 @forward 'modules/respond-to';
 @forward 'modules/opacity';
 @forward 'modules/placeholder' hide at-root;
