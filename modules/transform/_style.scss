@@ -4,7 +4,7 @@
 /// * Переменные
 /// @access public
 /// @param {list} $prefixes_transform-style список префиксов для свойства
-$prefixes_transform-style: o ms moz webkit !default;
+$prefixes_transform-style: moz webkit !default;
 
 /// * Миксин Transform Origin
 /// @name transform-style
