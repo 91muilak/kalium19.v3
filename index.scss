@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
-@forward 'modules/prefixer';
 @forward 'modules/animation';
+@forward 'modules/background-gradient';
 @forward 'modules/bem';
 @forward 'modules/border-radius';
 @forward 'modules/box-shadow';
@@ -21,6 +21,7 @@
 @forward 'modules/transition';
 @forward 'modules/transform';
 @forward 'modules/visually-hidden';
+@forward 'modules/prefixer';
 @forward 'modules/props';
 @forward 'modules/props/apply';
 @forward 'modules/push-auto';
