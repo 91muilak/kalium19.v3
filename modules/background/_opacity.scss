@@ -5,6 +5,6 @@
 /// @arg {color} $color [#000] color
 /// @arg {double} $opacity [0.85] opacity
 @mixin background-opacity($color: #000, $opacity: 0.85) {
-  background: $color;
-  background: rgba($color, $opacity);
+	background: $color;
+	background: rgba($color, $opacity);
 }

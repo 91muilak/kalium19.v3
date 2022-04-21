@@ -9,9 +9,9 @@
 /// @require {mixin} transform
 @mixin flip($scaleX: -1) {
 
-  @include transform(scaleX($scaleX));
+	@include transform(scaleX($scaleX));
 
-  filter    : FlipH;
-  -ms-filter: "FlipH";
+	filter    : FlipH;
+	-ms-filter: "FlipH";
 
 }
