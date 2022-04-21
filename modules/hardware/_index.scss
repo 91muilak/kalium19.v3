@@ -1,0 +1,12 @@
+/// * Миксин Hardware
+/// @name hardware
+/// @author gpessia
+/// @link https://github.com/gpessia
+/// @arg {boolean} $backface [true]
+/// @arg {int} $perspective [1000]
+@mixin hardware($backface: true, $perspective: 1000) {
+	@if $backface {
+		backface-visibility: hidden;
+	}
+	perspective: $perspective;
+}
