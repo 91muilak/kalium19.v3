@@ -70,10 +70,10 @@
 /// @name background-gradient-radial
 /// @author Matt Delac
 /// @link https://github.com/matthieua
-/// @param {color} $start-color [#3C3C3C] start color
-/// @param {percentage} $startPos [0%] start position
-/// @param {color} $end-color [#999999] end color
-/// @param {percentage} $endPos [100%] end position
+/// @arg {color} $start-color [#3C3C3C] start color
+/// @arg {percentage} $startPos [0%] start position
+/// @arg {color} $end-color [#999999] end color
+/// @arg {percentage} $endPos [100%] end position
 @mixin background-gradient-radial($start-color: #FFFFFF, $startPos: 0%, $end-color: #000000, $endPos:100%) {
 	background: -moz-radial-gradient(center, ellipse cover, $start-color $startPos, $end-color $endPos);
 	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop($startPos,$start-color), color-stop($endPos,$end-color));
