@@ -1,0 +1,21 @@
+/// * Импорт модулей
+@use '../prefixer' as *;
+
+/// * Переменные
+/// @access public
+/// @param {list} $prefixes_animation список префиксов для свойства
+$prefixes_animation: o ms moz webkit !default;
+
+/// * Миксин Animation
+/// @name animation
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} prefixer
+/// @arg {...} $params
+@mixin animation($params...) {
+	@include prefixer(
+		animation,
+		$params,
+		$prefixes_animation
+	);
+}
