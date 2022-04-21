@@ -1,0 +1,21 @@
+/// * Импорт модулей
+@use '../prefixer' as *;
+
+/// * Переменные
+/// @access public
+/// @param {list} $prefixes_transform-origin список префиксов для свойства
+$prefixes_transform-origin: o ms moz webkit !default;
+
+/// * Миксин Transform Origin
+/// @name transform-origin
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} prefixer
+/// @arg {...} $params
+@mixin transform-origin($params...) {
+	@include prefixer(
+		transform-origin,
+		$params,
+		$prefixes_transform-origin
+	);
+}
