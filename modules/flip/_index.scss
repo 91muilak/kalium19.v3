@@ -1,0 +1,18 @@
+/// * Импорт модулей
+@use '../transform' as *;
+
+/// * Миксин Flip
+/// @name flip
+/// @author Matt Delac
+/// @link https://github.com/matthieua
+/// @arg {double} $scaleX [-1] - ScaleX
+/// @require {mixin} transform
+
+@mixin flip($scaleX: -1) {
+
+  @include transform(scaleX($scaleX));
+
+  filter    : FlipH;
+  -ms-filter: "FlipH";
+
+}
