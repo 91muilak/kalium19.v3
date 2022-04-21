@@ -1,0 +1,12 @@
+/// * Импорт модулей
+@use '../push-auto' as *;
+
+/// * Миксин Center Block
+/// @name center-block
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} push-auto
+@mixin center-block {
+	@include push-auto();
+	display: block;
+}

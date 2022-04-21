@@ -7,7 +7,6 @@
 /// @link https://github.com/matthieua
 /// @arg {double} $scaleX [-1] - ScaleX
 /// @require {mixin} transform
-
 @mixin flip($scaleX: -1) {
 
   @include transform(scaleX($scaleX));
