@@ -1,0 +1,51 @@
+/// * Миксин Mquery
+/// Media query helper for declaring media queries by width, and, optionally, ratio.
+/// @name  mquery
+/// @author Gilles Bertaux
+/// @link https://github.com/gillesbertaux/andy
+/// @arg {length} $width max-width
+/// @arg {number | false} $ratio [false] min device pixel ratio
+@mixin mquery($width, $ratio: false) {
+	@if $ratio {
+		@media
+			only screen and (max-width: $width) and  (min--moz-device-pixel-ratio: $ratio),
+			only screen and (max-width: $width) and  (-webkit-min-device-pixel-ratio: $ratio),
+			only screen and (max-width: $width) and  (min-device-pixel-ratio: $ratio) {
+			@content;
+		}
+	} @else {
+		@media only screen and (max-width: $width) {
+			@content;
+		}
+	}
+}
+
+/// @example scss - Usage
+///   .foo {
+///     @include mquery(350px, 2) {
+///       width: 100%;
+///     }
+///   }
+
+/// * Миксин Mquery-r
+/// Media query helper for declaring media queries by device pixel ratio.
+/// @name mquery-r
+/// @author Gilles Bertaux
+/// @link https://github.com/gillesbertaux/andy
+/// @arg {number} $ratio min device pixel ratio
+@mixin mquery-r($ratio) {
+	@media
+		only screen and (-webkit-min-device-pixel-ratio: $ratio),
+		only screen and (min--moz-device-pixel-ratio: $ratio),
+		only screen and (-o-min-device-pixel-ratio: $ratio),
+		only screen and (min-device-pixel-ratio: $ratio) {
+		@content;
+	}
+}
+
+/// @example scss - Usage
+///   .foo {
+///     @include mquery-r(2) {
+///       width: 100%;
+///     }
+///   }

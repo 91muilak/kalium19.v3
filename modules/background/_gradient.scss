@@ -1,0 +1,84 @@
+/// * Миксин Background Gradient
+/// @name background-gradient
+/// @author Justin Brazeau
+/// @link https://toptal.com/resume/justin-brazeau
+/// @arg {color} $start-color [#3C3C3C] цвет начала графиента
+/// @arg {color} $end-color [#999999] цвет конца градиента
+/// @arg {string} $orientation [null] vertical or horizontal
+@mixin background-gradient($start-color, $end-color, $orientation) {
+
+	background: $start-color;
+
+	@if $orientation == 'vertical' {
+		background: -webkit-linear-gradient(top, $start-color, $end-color);
+		background: linear-gradient(to bottom, $start-color, $end-color);
+	} @else if $orientation == 'horizontal' {
+		background: -webkit-linear-gradient(left, $start-color, $end-color);
+		background: linear-gradient(to right, $start-color, $end-color);
+	} @else {
+		background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+		background: radial-gradient(ellipse at center, $start-color, $end-color);
+	}
+
+}
+
+/// * Миксин Background Gradient Linear
+/// @name background-gradient-linear
+/// @author Matt Delac
+/// @link https://github.com/matthieua
+/// @arg {color} $start-color [#3C3C3C] цвет начала графиента
+/// @arg {color} $end-color [#999999] цвет конца градиента
+/// @arg {string} $orientation [null] vertical or horizontal
+@mixin background-gradient-linear($start-color: #3C3C3C, $end-color: #999999, $orientation) {
+
+	/// ? Horizontal Gradient
+	@if $orientation == 'horizontal' {
+		background-image: -webkit-gradient(linear, left top, right top, from($start-color), to($end-color));
+		background-image: -webkit-linear-gradient(left, $start-color, $end-color);
+		background-image:    -moz-linear-gradient(left, $start-color, $end-color);
+		background-image:     -ms-linear-gradient(left, $start-color, $end-color);
+		background-image:      -o-linear-gradient(left, $start-color, $end-color);
+		background-image:         linear-gradient(left, $start-color, $end-color);
+		filter:            progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$start-color}', endColorStr='#{$end-color}', gradientType='1');
+	}
+
+	/// ? Horizontal (inverse) Gradient
+	@else if $orientation == 'horizontal-inverse' {
+		background-image: -webkit-gradient(linear, right top, left top, from($start-color), to($end-color));
+		background-image: -webkit-linear-gradient(right, $start-color, $end-color);
+		background-image:    -moz-linear-gradient(right, $start-color, $end-color);
+		background-image:     -ms-linear-gradient(right, $start-color, $end-color);
+		background-image:      -o-linear-gradient(right, $start-color, $end-color);
+		background-image:         linear-gradient(right, $start-color, $end-color);
+		filter:            progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$end-color}', endColorStr='#{$start-color}', gradientType='1');
+	}
+
+	/// ? Vertical Gradient
+	@else {
+		background-image: -webkit-gradient(linear, left top, left bottom, from($start-color), to($end-color));
+		background-image: -webkit-linear-gradient(top, $start-color, $end-color);
+		background-image:    -moz-linear-gradient(top, $start-color, $end-color);
+		background-image:     -ms-linear-gradient(top, $start-color, $end-color);
+		background-image:      -o-linear-gradient(top, $start-color, $end-color);
+		background-image:         linear-gradient(top, $start-color, $end-color);
+		filter:            progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$start-color}', endColorStr='#{$end-color}');
+	}
+
+}
+
+/// * Миксин Background Gradient Radial
+/// @name background-gradient-radial
+/// @author Matt Delac
+/// @link https://github.com/matthieua
+/// @arg {color} $start-color [#3C3C3C] start color
+/// @arg {percentage} $startPos [0%] start position
+/// @arg {color} $end-color [#999999] end color
+/// @arg {percentage} $endPos [100%] end position
+@mixin background-gradient-radial($start-color: #FFFFFF, $startPos: 0%, $end-color: #000000, $endPos:100%) {
+	background: -moz-radial-gradient(center, ellipse cover, $start-color $startPos, $end-color $endPos);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop($startPos,$start-color), color-stop($endPos,$end-color));
+	background: -webkit-radial-gradient(center, ellipse cover, $start-color $startPos,$end-color $endPos);
+	background: -o-radial-gradient(center, ellipse cover, $start-color $startPos,$end-color $endPos);
+	background: -ms-radial-gradient(center, ellipse cover, $start-color $startPos,$end-color $endPos);
+	background: radial-gradient(ellipse at center, $start-color $startPos,$end-color $endPos);
+}

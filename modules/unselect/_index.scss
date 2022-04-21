@@ -1,0 +1,14 @@
+/// * Импорт модулей
+@use '../prefixer' as *;
+
+/// * Миксин Unselect
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} prefixer
+@mixin unselect {
+	@include prefixer(
+		user-select,
+		none,
+		webkit moz ms
+	);
+}

@@ -1,0 +1,21 @@
+/// * Импорт модулей
+@use '../prefixer' as *;
+
+/// * Переменные
+/// @access public
+/// @param {list} $prefixes_transform-style список префиксов для свойства
+$prefixes_transform-style: moz webkit !default;
+
+/// * Миксин Transform Origin
+/// @name transform-style
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @require {mixin} prefixer
+/// @arg {...} $params
+@mixin transform-style($params...) {
+	@include prefixer(
+		transform-style,
+		$params,
+		$prefixes_transform-style
+	);
+}

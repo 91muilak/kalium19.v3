@@ -1,0 +1,31 @@
+/// * Переменные
+/// @access public
+/// @param {map} $breakpoints список брейкпоинтов
+$breakpoints: (
+	xs: (min-width: 0),
+	sm: (min-width: 576px),
+	md: (min-width: 768px),
+	lg: (min-width: 992px),
+	xl: (min-width: 1200px),
+	xxl: (min-width: 1400px)
+) !default;
+
+/// * Миксин Respond-To
+/// @name respond-to
+/// @author Kitty Giraudel
+/// @link https://github.com/KittyGiraudel
+/// @param {string} $breakpoint
+@mixin respond-to($breakpoint) {
+
+	@if map-has-key($breakpoints, $breakpoint) {
+		@media #{inspect(map-get($breakpoints, $breakpoint))} {
+			@content;
+		}
+	}
+
+	/// Вывод ошибки при передаче неизвестного брекпоинта
+	@else {
+		@error '⛔ Брейкпоинт "#{$breakpoint}" не найден. Все текущие доступные брейкпоинты: #{map-keys($breakpoints)}.';
+	}
+
+}

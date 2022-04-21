@@ -1,3 +1,38 @@
+## 3.0.6 / Apr 21, 2022
+- Добавляет миксин `text-shorten` / fixed #24
+- Добавляет миксин `centering` / fixed #27
+- Добавляет миксин `placeholder` / fixed #28
+- Добавляет функцию `contains`
+- Добавляет миксин `font-face` / fixed #26
+- Добавляет миксин `google-fonts` от [@jakob-e](https://github.com/jakob-e)
+- Доработка доки в `prefixer-legacy`
+- Добавляет миксин `respond-to` / fixed #25
+- Приводит код к общему стилю
+- Добавляет миксин `push-auto`
+- Добавляет миксин `animation`
+- Добавляет миксин `background-gradient`
+- Добавляет миксин `image-2x`
+- Добавляет аргумент `$clip` в миксин `border-radius`
+- Добавляет миксин `wh`
+- Добавляет миксин `hardware` от [@gpessia](https://github.com/gpessia)
+- Добавляет миксин `antialias` от [@gpessia](https://github.com/gpessia)
+- Добавляет миксин `selection` от [@gpessia](https://github.com/gpessia)
+- Добавляет миксин `unselect`
+- Дорабатывает миксин `background-gradient` вариантом от [@matthieua](https://github.com/matthieua)
+- Добавляет миксин `background-gradient-radial` от [@matthieua](https://github.com/matthieua)
+- Добавляет миксин `background-size` от [@matthieua](https://github.com/matthieua)
+- Добавляет миксин `background-opacity` от [@matthieua](https://github.com/matthieua)
+- Дорабатывает миксин `background-size`
+- Добавляет миксин `columns` от [@matthieua](https://github.com/matthieua)
+- Добавляет миксин `flip` от [@matthieua](https://github.com/matthieua)
+- Добавляет миксин `transform-origin`
+- Добавляет миксин `transform-style`
+- Исправляет префиксы `transform-style`
+- Добавляет миксин `center-block`
+- Добавляет миксин `mquery` от [@gillesbertaux](https://github.com/gillesbertaux) + рефакторинг
+- Небольшие правки
+- Доработка по [@editorconfig](https://github.com/editorconfig)
+
 ## 3.0.5 / Apr 20, 2022
 - Переработка комментариев в миксинах BEM
 - Переносит миксины BEM на использование директивы `@use`
@@ -24,10 +59,10 @@
 - Добавляет расширенный выбор `border-radius`
 
 ## 3.0.0 / Apr 7, 2022
-- Добавляет миксин `color-tint` от @KittyGiraudel
-- Добавляет миксин `color-shade` от @KittyGiraudel
-- Добавляет миксин `str-replace` от @KittyGiraudel
-- Добавляет миксин `position` от @KittyGiraudel
+- Добавляет миксин `color-tint` от [@KittyGiraudel](https://github.com/KittyGiraudel)
+- Добавляет миксин `color-shade` от [@KittyGiraudel](https://github.com/KittyGiraudel)
+- Добавляет миксин `str-replace` от [@KittyGiraudel](https://github.com/KittyGiraudel)
+- Добавляет миксин `position` от [@KittyGiraudel](https://github.com/KittyGiraudel)
 - Добавляет миксины `deep-set` и `deep-get`
 - Добавляет миксины `b`, `e` и `m` (BEM)
 - Добавляет миксин `props-apply`

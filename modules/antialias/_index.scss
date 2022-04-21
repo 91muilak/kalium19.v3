@@ -1,0 +1,9 @@
+/// * Миксин Antialias
+/// @name antialias
+/// @author gpessia
+/// @link https://github.com/gpessia
+@mixin antialias {
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
