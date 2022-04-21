@@ -1,0 +1,8 @@
+/// * Миксин Selection
+/// @name selection
+/// @author gpessia
+/// @link https://github.com/gpessia
+@mixin selection {
+	::-moz-selection { @content; }
+	::selection { @content; }
+}

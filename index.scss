@@ -19,15 +19,16 @@
 @forward 'modules/opacity';
 @forward 'modules/placeholder' hide at-root;
 @forward 'modules/position';
+@forward 'modules/prefixer';
+@forward 'modules/props';
+@forward 'modules/props/apply';
+@forward 'modules/push-auto';
+@forward 'modules/selection';
 @forward 'modules/tab-size';
 @forward 'modules/text-shorten';
 @forward 'modules/transition';
 @forward 'modules/transform';
 @forward 'modules/visually-hidden';
-@forward 'modules/prefixer';
-@forward 'modules/props';
-@forward 'modules/props/apply';
-@forward 'modules/push-auto';
 @forward 'modules/wh';
 
 @forward 'modules/utils/color-shade';
