@@ -13,8 +13,13 @@ $prefixes_border-radius: webkit moz !default;
 /// @author Haba Kudzaev (rx1310)
 /// @link https://github.com/rx1310
 /// @require {mixin} prefixer
-/// @arg $radius
-@mixin border-radius($radius: $border-radius) {
+/// @arg {int} $radius [$border-radius] радиус скругления
+/// @arg {boolean} $clip [true] останавливает утечку цвета фона за бордер
+@mixin border-radius($radius: $border-radius, $clip: true) {
+
+	@if $clip {
+		background-clip: padding-box;
+	}
 
 	@include prefixer(
 		border-radius,
@@ -33,7 +38,12 @@ $prefixes_border-radius: webkit moz !default;
 /// @arg $vr - скругления сверху и снизу
 /// @arg $hr - скругления по бокам
 /// @arg $radius - радиус скругления
-@mixin border-corner-radius($vr, $hr, $radius: $border-radius) {
+/// @arg {boolean} $clip [true] останавливает утечку цвета фона за бордер
+@mixin border-corner-radius($vr, $hr, $radius: $border-radius, $clip: true) {
+
+	@if $clip {
+		background-clip: padding-box;
+	}
 
 	@include prefixer(
 		border-#{$vr}-#{$hr}-radius,
