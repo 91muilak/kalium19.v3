@@ -14,7 +14,7 @@ $breakpoints: (
 /// @name respond-to
 /// @author Kitty Giraudel
 /// @link https://github.com/KittyGiraudel
-/// @param {string} $breakpoint
+/// @arg {string} $breakpoint
 @mixin respond-to($breakpoint) {
 
 	@if map-has-key($breakpoints, $breakpoint) {
