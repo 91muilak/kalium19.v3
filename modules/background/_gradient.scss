@@ -9,10 +9,10 @@
 
 	background: $start-color;
 
-	@if $orientation == 'vertical' {
+	@if $orientation == 'vertical' or $orientation == 'vr' {
 		background: -webkit-linear-gradient(top, $start-color, $end-color);
 		background: linear-gradient(to bottom, $start-color, $end-color);
-	} @else if $orientation == 'horizontal' {
+	} @else if $orientation == 'horizontal' or $orientation == 'hr' {
 		background: -webkit-linear-gradient(left, $start-color, $end-color);
 		background: linear-gradient(to right, $start-color, $end-color);
 	} @else {
@@ -32,7 +32,7 @@
 @mixin background-gradient-linear($start-color: #3C3C3C, $end-color: #999999, $orientation) {
 
 	/// ? Horizontal Gradient
-	@if $orientation == 'horizontal' {
+	@if $orientation == 'horizontal' or $orientation == 'hr' {
 		background-image: -webkit-gradient(linear, left top, right top, from($start-color), to($end-color));
 		background-image: -webkit-linear-gradient(left, $start-color, $end-color);
 		background-image:    -moz-linear-gradient(left, $start-color, $end-color);
@@ -43,7 +43,7 @@
 	}
 
 	/// ? Horizontal (inverse) Gradient
-	@else if $orientation == 'horizontal-inverse' {
+	@else if $orientation == 'horizontal-inverse' or $orientation == 'hri' {
 		background-image: -webkit-gradient(linear, right top, left top, from($start-color), to($end-color));
 		background-image: -webkit-linear-gradient(right, $start-color, $end-color);
 		background-image:    -moz-linear-gradient(right, $start-color, $end-color);
