@@ -9,6 +9,8 @@
 /// @link https://github.com/daneden
 /// @author Haba Kudzaev (rx1310)
 /// @link https://github.com/rx1310
+/// @require {mixin} keyframes
+/// @require {mixin} opacity
 @mixin animate-flash($createClass: false) {
 
 	@include keyframes(flash) {
@@ -27,7 +29,7 @@
 	}
 
 	@if $createClass == true {
-		.flash { animation-name: flash; }
+		.animate-flash { animation-name: flash; }
 	}
 
 }
