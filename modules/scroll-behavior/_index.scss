@@ -1,0 +1,10 @@
+/// * Миксин Scroll-Behavior
+/// @name scroll-behavior
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @arg {string} $value [auto, smooth]
+@mixin scroll-behavior($value: smooth) {
+	@media (prefers-reduced-motion: no-preference) {
+		scroll-behavior: $value;
+	}
+}
