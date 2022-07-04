@@ -35,7 +35,7 @@
 /// @link https://github.com/KittyGiraudel
 /// @arg {arglist} $args offsets
 /// @require {mixin} position
-@mixin relative($args...) {
+@mixin position-relative($args...) {
 	@include position(relative, $args...);
 }
 
@@ -46,6 +46,6 @@
 /// @link https://github.com/KittyGiraudel
 /// @arg {arglist} $args offsets
 /// @require {mixin} position
-@mixin fixed($args...) {
+@mixin position-fixed($args...) {
 	@include position(fixed, $args...);
 }
